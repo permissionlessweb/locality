@@ -1,0 +1,69 @@
+@import "colors";
+
+.container {
+  overflow-y: auto;
+
+  .content {
+    margin: 16px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .interactions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    background: $hover;
+    border: none;
+    outline: none;
+
+    padding: 12px;
+    margin-bottom: 4px;
+
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+    button {
+      margin: 3px;
+      padding: 4px;
+      border-radius: 3px;
+
+      background: $active;
+
+      &.selected {
+        color: $background;
+        background: $secondary;
+      }
+    }
+  }
+
+  .interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    border-radius: 6px;
+    background: $hover;
+
+    // additional margin for scroll snapping (when scrolling into view, add this around)
+    scroll-margin: 16px;
+  }
+
+  .instruction {
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+
+    color: $secondary;
+
+    margin: 20px auto;
+    width: 90%;
+    max-width: 300px;
+  }
+}
