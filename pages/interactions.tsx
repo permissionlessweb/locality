@@ -4,7 +4,7 @@ import { usePlausible } from "next-plausible"
 import { FC, useEffect, useMemo, useRef, useState } from "react"
 import { SWRConfig } from "swr"
 
-import Interaction, { InteractionDisclaimer } from "../components/interaction"
+import Interaction, { InteractionDisclaimer } from "../components/salvum/interaction"
 import { useInteractions } from "../helpers/swr"
 import { getInteractions } from "../services/data"
 import {

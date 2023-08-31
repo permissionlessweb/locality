@@ -1,7 +1,13 @@
 import { Flex, chakra, Stack, Box, Link } from "@chakra-ui/react";
+import router from "next/router";
 
 
 export default function RegisterMsg() {
+  
+  function toRegistration() {
+    router.push('/register');
+
+  }
     return (
         <Flex
         bg="#edf3f8"
@@ -56,7 +62,7 @@ export default function RegisterMsg() {
                   color: "gray.500",
                 }}
               >
-                We want to connect with you!
+                Lets do it! Register Here.
               </chakra.span>
             </chakra.span>
             <Stack
@@ -71,8 +77,13 @@ export default function RegisterMsg() {
               spacing={2}
               mt={2}
             >
-              <Box display="inline-flex" rounded="md" shadow="md">
+              <Box display="inline-flex"   bg="white.600"
+                  _dark={{
+                    bg: "white.500",
+                    color: "white.200"
+                  }}  rounded="md" shadow="md">
                 <Link
+                onClick={toRegistration}
                   w="full"
                   display="inline-flex"
                   alignItems="center"
@@ -83,83 +94,24 @@ export default function RegisterMsg() {
                   fontWeight="bold"
                   rounded="md"
                   _light={{
-                    color: "blue.700",
+                    color: "white.700",
                   }}
-                  bg="brand.600"
+                  bg="white.600"
                   _dark={{
-                    bg: "brand.500",
-                    color: "blue.200"
+                    bg: "white.500",
+                    color: "white.200"
                   }}
                   _hover={{
-                    bg: "brand.700",
+                    bg: "white.700",
                     _dark: {
-                      bg: "brand.600",
+                      bg: "white.600",
                     },
                   }}
                 >
-                   Artist Registration
+                   Registration Form
                 </Link>
               </Box>
-              <Box ml={3} display="inline-flex" rounded="md" shadow="md">
-                <Link
-                  w="full"
-                  display="inline-flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  px={5}
-                  py={3}
-                  border="solid transparent"
-                  fontWeight="bold"
-                  rounded="md"
-                  _light={{
-                    color: "blue.700",
-                  }}
-                  bg="brand.600"
-                  _dark={{
-                    bg: "brand.500",
-                    color: "blue.200"
-                  }}
-                  _hover={{
-                    bg: "brand.700",
-                    _dark: {
-                      bg: "brand.600",
-                    },
-                  }}
-                >
-                    Collaborator Registration
-                </Link>
-
-              </Box>
-              <Box ml={3} display="inline-flex" rounded="md" shadow="md">
-                <Link
-                  w="full"
-                  display="inline-flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  px={5}
-                  py={3}
-                  border="solid transparent"
-                  fontWeight="bold"
-                  rounded="md"
-                  _light={{
-                    color: "blue.700",
-                  }}
-                  bg="brand.600"
-                  _dark={{
-                    bg: "brand.500",
-                    color: "blue.200"
-                  }}
-                  _hover={{
-                    bg: "brand.700",
-                    _dark: {
-                      bg: "brand.600",
-                    },
-                  }}
-                >
-                    Sponsorship Registration
-                </Link>
-
-              </Box>
+            
             </Stack>
           </Box>
         </Flex>

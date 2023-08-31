@@ -1,8 +1,14 @@
-import { chakra, Stack , Box, Text} from "@chakra-ui/react";
+import { chakra, Stack , Box, Text, Button} from "@chakra-ui/react";
+import router from "next/router";
 import React from "react";
 
 
 export default function WelcomeMsg ()  {
+
+  function toRegistration() {
+    router.push('/register');
+
+  }
     return (
         <Box maxW="7xl" mx="auto">
         <Box
@@ -117,65 +123,12 @@ export default function WelcomeMsg ()  {
                 }}
                 justifyContent="center"
               >
-                <Box rounded="full" shadow="md">
-                  <chakra.a
-                    w="full"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    border="solid 1px transparent"
-                    fontSize={{
-                      base: "md",
-                      md: "lg",
-                    }}
-                    rounded="md"
-                    color="silver"
-                    bg="brand.600"
-                    _hover={{
-                      bg: "brand.700",
-                    }}
-                    px={{
-                      base: 8,
-                      md: 10,
-                    }}
-                    py={{
-                      base: 3,
-                      md: 4,
-                    }}
-                    cursor="pointer"
-                  >
-                    Learn More
-                  </chakra.a>
-                </Box>
-                <Box mt={[3, 0]} ml={[null, 3]}>
-                  <chakra.a
-                    w="full"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    px={{
-                      base: 8,
-                      md: 10,
-                    }}
-                    py={{
-                      base: 3,
-                      md: 4,
-                    }}
-                    border="solid 1px transparent"
-                    fontSize={{
-                      base: "md",
-                      md: "lg",
-                    }}
-                    rounded="md"
-                    color="brand.700"
-                    bg="brand.600"
-                    _hover={{
-                      bg: "brand.200",
-                    }}
-                    cursor="pointer"
-                  >
-                    Join our Team!
-                  </chakra.a>
+              
+                <Box display="inline-flex"   bg="white.600"
+                  _dark={{
+                    bg: "white.500",
+                    color: "white.200"
+                  }}  rounded="md" shadow="md">
                 </Box>
               </Stack>
             </Box>

@@ -1,22 +1,30 @@
-import { ButtonGroup, Flex, Heading, chakra } from "@chakra-ui/react";
+import { Button, ButtonGroup, Flex, Heading, chakra } from "@chakra-ui/react";
 import Link from "next/link";
-import { useViewportScroll } from "framer-motion";
+import {  useScroll } from "framer-motion";
 import React from "react";
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 
 import { ActionButton } from "components/navbar/action-button";
 import { ColorModeToggle } from "components/navbar/color-mode-toggle";
-import SponsorButton from "components/navbar/sponsor-button";
+import EmergencyButton from "components/navbar/sponsor-button";
 import { CONSTANTS } from "config/defaults";
+import FeaturesPopoverModal from './features-popover'
+import { IoWarningOutline } from "react-icons/io5";
+import router from "next/router";
 
 function Navbar() {
   const ref = React.useRef<HTMLDivElement>(null);
   const [y, setY] = React.useState(0);
   const height = ref.current ? ref.current.getBoundingClientRect() : 0;
-  const { scrollY } = useViewportScroll();
+  const { scrollY } =  useScroll();
   React.useEffect(() => {
     return scrollY.onChange(() => setY(scrollY.get()));
   }, [scrollY]);
+
+    
+  function toEmergency() {
+    router.push('/emergency');
+  }
 
   return (
     <chakra.nav
@@ -46,7 +54,7 @@ function Navbar() {
       </Flex>
 
       <Flex justify="center">
-        {/* <DocSearch w="sm" display={{ md: "flex" }} /> */}
+      <FeaturesPopoverModal/>
       </Flex>
 
       <Flex justify="right">
@@ -64,7 +72,7 @@ function Navbar() {
             icon={<FaGithub />}
           />
           <ColorModeToggle />
-          <SponsorButton />
+          <Button onClick={toEmergency}><IoWarningOutline/> &nbsp;Emergency</Button>
         </ButtonGroup>
       </Flex>
     </chakra.nav>
