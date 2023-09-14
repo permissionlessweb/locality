@@ -1,7 +1,7 @@
 import { Box, Button, Link, Popover, PopoverContent, PopoverTrigger, SimpleGrid, chakra, useColorModeValue } from "@chakra-ui/react";
 import router from "next/router";
 import React from "react";
-import { IoArrowDown } from "react-icons/io5";
+import { IoArrowDown, IoWarning } from "react-icons/io5";
 
 function toHome() {
   router.push('/');
@@ -9,8 +9,8 @@ function toHome() {
 function toSubstances() {
   router.push('/substances');
 }
-function toBlog() {
-  router.push('/blog');
+function toEmergency() {
+  router.push('/emergency');
 }
 function toInteractions() {
   router.push('/interactions');
@@ -97,13 +97,13 @@ const Features = (props: any) => {
          Choose two substances to view their interaction profile. 
         </Section>
 
-        <Section
+        {/* <Section
           href={toSubstances}
           title="Substances"
           
         >
           Search for information on substances   
-        </Section>
+        </Section> */}
         <Section
           href={toBreathe}
           title="Breathe"
@@ -111,6 +111,7 @@ const Features = (props: any) => {
         >
 A guided square breath to ground yourself
         </Section>
+        <Button onClick={toEmergency}> <IoWarning/> &nbsp; Emergency </Button>
 
 
 

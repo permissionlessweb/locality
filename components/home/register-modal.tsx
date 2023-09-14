@@ -54,7 +54,16 @@ export default function RegisterMsg() {
               }}
               mb={6}
             >
-              <chakra.span display="block">Eager to Help?</chakra.span>
+              <chakra.span  display={{
+              base: "block",
+              lg: "inline",
+            }}
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r, green.400,purple.500)"
+            fontWeight="extrabold">
+           
+          Eager to Help?</chakra.span>
               <chakra.span
                 display="block"
                 color="brand.600"
@@ -108,7 +117,7 @@ export default function RegisterMsg() {
                     },
                   }}
                 >
-                   Registration Form
+                   Register Here
                 </Link>
               </Box>
             

@@ -1,4 +1,4 @@
-import { Flex, Stack, chakra, Box ,Link} from "@chakra-ui/react";
+import { Flex, Stack, chakra, Box ,Link, Text,} from "@chakra-ui/react";
 
 export default function WhosInvolvedMsg() {
     return(
@@ -47,15 +47,19 @@ export default function WhosInvolvedMsg() {
 
 
             <Flex justifyContent="start" mt={4}>
-              <Link
-                fontSize="xl"
-                color="brand.500"
-                _dark={{
-                  color: "brand.300",
-                }}
-              >
+            <Text
+            display={{
+              base: "block",
+              lg: "inline",
+            }}
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r, green.400,purple.500)"
+            fontWeight="extrabold"
+            fontSize="xl"
+          >
                General Operations
-              </Link>
+              </Text>
             </Flex>
             <chakra.p
               mt={2}
@@ -84,15 +88,19 @@ TerpNET Design DAO
 
 
             <Flex justifyContent="start" mt={4}>
-              <Link
-                fontSize="xl"
-                color="brand.500"
-                _dark={{
-                  color: "brand.300",
-                }}
-              >
+            <Text
+            display={{
+              base: "block",
+              lg: "inline",
+            }}
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r, green.400,purple.500)"
+            fontWeight="extrabold"
+            fontSize="xl"
+          >
                 Artists 
-              </Link>
+              </Text>
             </Flex>
             <chakra.p
               mt={2}
@@ -122,15 +130,19 @@ TerpNET Design DAO
 
 
             <Flex justifyContent="start" mt={4}>
-              <Link
-                fontSize="xl"
-                color="brand.500"
-                _dark={{
-                  color: "brand.300",
-                }}
-              >
+            <Text
+            display={{
+              base: "block",
+              lg: "inline",
+            }}
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r, green.400,purple.500)"
+            fontWeight="extrabold"
+            fontSize="xl"
+          >
                 Harm Reduction Specialist
-              </Link>
+              </Text>
             </Flex>
             <chakra.p
               mt={2}

@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Stack, chakra } from "@chakra-ui/react";
+import { Box, Flex, Link, Stack, chakra, Text } from "@chakra-ui/react";
 
 
 export default function HowItWorksMsg ()  {
@@ -48,15 +48,19 @@ export default function HowItWorksMsg ()  {
 
 
             <Flex justifyContent="start" mt={4}>
-              <Link
-                fontSize="xl"
-                color="brand.500"
-                _dark={{
-                  color: "brand.300",
-                }}
-              >
+            <Text
+            display={{
+              base: "block",
+              lg: "inline",
+            }}
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r, green.400,purple.500)"
+            fontWeight="extrabold"
+            fontSize="xl"
+          >
                 1. Collaborative NFT Collection
-              </Link>
+              </Text>
             </Flex>
             <chakra.p
               mt={2}
@@ -85,15 +89,19 @@ export default function HowItWorksMsg ()  {
 
 
             <Flex justifyContent="start" mt={4}>
-              <Link
-                fontSize="xl"
-                color="brand.500"
-                _dark={{
-                  color: "brand.300",
-                }}
-              >
+            <Text
+            display={{
+              base: "block",
+              lg: "inline",
+            }}
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r, green.400,purple.500)"
+            fontWeight="extrabold"
+            fontSize="xl"
+          >
                 2. Non-Profit DAO
-              </Link>
+              </Text>
             </Flex>
             <chakra.p
               mt={2}
@@ -123,15 +131,19 @@ export default function HowItWorksMsg ()  {
 
 
             <Flex justifyContent="start" mt={4}>
-              <Link
-                fontSize="xl"
-                color="brand.500"
-                _dark={{
-                  color: "brand.300",
-                }}
-              >
+            <Text
+            display={{
+              base: "block",
+              lg: "inline",
+            }}
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r, green.400,purple.500)"
+            fontWeight="extrabold"
+            fontSize="xl"
+          >
                 3. Funding Proposal Structure
-              </Link>
+              </Text>
             </Flex>
             <chakra.p
               mt={2}
