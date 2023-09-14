@@ -2,6 +2,7 @@ import Head from "next/head"
 import Link from "next/link"
 import React, { FC, useState } from "react"
 import PuffLoader from "react-spinners/PuffLoader"
+import { Container } from "../components/salvum/emergency/emergency"
 
 const pages = [
   {
@@ -34,14 +35,14 @@ const EmergencyPage: FC = () => {
           content="Guides to help make it through a difficult experience."
         />
       </Head>
-
+      <Container>
       <div className="e-container">
         <h1>Select the type of emergency.</h1>
 
         <div className="e-pages">
           {pages.map(({ title, href }) => (
-            <Link key={title} href={href}>
-              <a onClick={() => setLoadingHref(href)}>
+            <Link key={title}href={href}>
+              <a className="emergency-type-header"  onClick={() => setLoadingHref(href)}>
                 {loadingHref === href ? (
                   <PuffLoader size={60} color="#ffffff" />
                 ) : (
@@ -62,7 +63,7 @@ const EmergencyPage: FC = () => {
           in doubt, contact emergency health services if anyone is at risk of
           hurting themself or others.
         </p>
-      </div>
+      </div></Container>
     </>
   )
 }

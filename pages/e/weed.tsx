@@ -7,7 +7,7 @@ import {
   PeerSupportResourcesSection,
   RowLink,
   Section,
-} from "../../components/salvum/emergency"
+} from "../../components/salvum/emergency/emergency"
 import Header from "../../components/salvum/header"
 import React from "react"
 
@@ -21,39 +21,39 @@ const Weed: FC = () => (
       />
     </Head>
 
-    <Header title="Too Much Weed" backHref="/emergency" centered />
 
     <Container>
+    <Header title="Too Much Weed" backHref="/emergency" centered />
       <Section>
         <h1>don&apos;t panic. you&apos;re ok</h1>
       </Section>
 
       <Section>
         <h2>Keep in mind...</h2>
-        <ul>
+     
           <li>your body is safe</li>
           <li>
             you are experiencing a substance-induced state of mind, which will
             end
           </li>
           <li>this is normal</li>
-        </ul>
+      
       </Section>
 
       <Section>
         <h2>Are you...</h2>
-        <ul>
+      
           <li>hungry?</li>
           <li>thirsty?</li>
           <li>too warm or too cold?</li>
           <li>overwhelmed by noise?</li>
           <li>in an uncomfortable social situation?</li>
-        </ul>
+       
       </Section>
 
       <Section>
         <h2>Try...</h2>
-        <ul>
+      
           <li>following the breathing exercise below</li>
           <li>grabbing some water or tasty food</li>
           <li>changing the music to something chill or light</li>
@@ -63,7 +63,7 @@ const Weed: FC = () => (
           <li>distracting yourself with a game, movie, or show</li>
           <li>cuddling with a pet</li>
           <li>going to sleep</li>
-        </ul>
+       
       </Section>
 
       <Section>

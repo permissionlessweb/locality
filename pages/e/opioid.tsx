@@ -11,7 +11,7 @@ import {
   RecoveryPositionSection,
   Section,
   Signs,
-} from "../../components/salvum/emergency"
+} from "../../components/salvum/emergency/emergency"
 import Header from "../../components/salvum/header"
 import React from "react"
 
@@ -75,24 +75,22 @@ const OpioidPoisoning: FC = () => (
         </p>
 
         <h3>Verbal</h3>
-        <ul>
+      
           <li>Call their name.</li>
           <li>
             Say something they may not like to hear to grab their attention
             (such as &quot;I&apos;m going to call the police&quot;).
           </li>
-        </ul>
+    
 
         <h3>Physical</h3>
-        <ul>
+       
           <li>
             Rub your knuckles on the middle of their chest where the ribs meet
             (on the sternum).
           </li>
           <li>Rub your knuckles on their upper lip.</li>
           <li>Pinch the back of their arm.</li>
-        </ul>
-
         <p>
           If they don&apos;t respond and show signs listed above, assume they
           are overdosing.
@@ -105,7 +103,6 @@ const OpioidPoisoning: FC = () => (
 
       <Section>
         <h2>Administer naloxone if available.</h2>
-        <ul>
           <li>
             <b>Nasal Spray:</b> Pick one nostril, stick the device all the way
             up, and activate the plunger.
@@ -113,7 +110,6 @@ const OpioidPoisoning: FC = () => (
           <li>
             <b>Injectable:</b> Inject into thigh muscle.
           </li>
-        </ul>
 
         <p>Apply a second time if they do not respond in 3-5 minutes.</p>
       </Section>
@@ -124,11 +120,9 @@ const OpioidPoisoning: FC = () => (
         </h2>
 
         <h3>Tell the dispatcher:</h3>
-        <ul>
           <li>Their breathing has slowed or stopped.</li>
           <li>They are unresponsive.</li>
           <li>Your exact location.</li>
-        </ul>
         <p className="dim">
           The dispatcher only needs to know that someone&apos;s life is in
           immediate danger. Mentioning drugs could draw unwanted and unnecessary
@@ -136,12 +130,10 @@ const OpioidPoisoning: FC = () => (
         </p>
 
         <h3>Tell the paramedics:</h3>
-        <ul>
           <li>Whether or not you administered naloxone and if it helped.</li>
           <li>
             As much information about the ingested substances as possible.
           </li>
-        </ul>
       </Section>
 
       <Section>
@@ -160,7 +152,6 @@ const OpioidPoisoning: FC = () => (
           If they are unresponsive and not breathing much or have stopped
           breathing, you need to get oxygen into their body.
         </p>
-        <ul>
           <li>Place them on their back.</li>
           <li>Tilt up their chin to open the airway.</li>
           <li>
@@ -173,7 +164,6 @@ const OpioidPoisoning: FC = () => (
             is completely plugged.
           </li>
           <li>Repeat: give one breath every 5 seconds.</li>
-        </ul>
       </Section>
 
       <RecoveryPositionSection />

@@ -13,7 +13,7 @@ import {
   PlausibleEvents,
 } from "../types"
 import styles from "../styles/interactions.module.scss"
-import { Container } from "@chakra-ui/react"
+import { Container, Text } from "@chakra-ui/react"
 
 const Interactions: FC = () => {
   const { interactions } = useInteractions()
@@ -94,7 +94,12 @@ const Interactions: FC = () => {
                 substance === substance1 || substance === substance2,
             })}
           >
+            <Text   color="white"
+          _dark={{
+            color: "white",
+          }}>
             {substance}
+            </Text>
           </button>
         ))}
       </div>

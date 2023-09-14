@@ -7,7 +7,7 @@ import {
   Container,
   PeerSupportResourcesSection,
   Section,
-} from "../../components/salvum/emergency"
+} from "../../components/salvum/emergency/emergency"
 import Header from "../../components/salvum/header"
 import React from "react"
 
@@ -21,39 +21,39 @@ const Psychedelic: FC = () => (
       />
     </Head>
 
-    <Header title="Psychedelic" backHref="/emergency" centered />
+    <Header title="Psychedelic" backHref="/emergency" centered></Header>
 
     <Container>
-      <Section>
-        <h1>breathe, relax, let go</h1>
-      </Section>
+ 
+        <h1 className="pysch-header">breathe, relax, let go</h1>
+   
 
       <Section>
         <h2>Keep in mind...</h2>
-        <ul>
+       
           <li>your body is safe</li>
           <li>
             you are experiencing a substance-induced state of mind, which will
             end
           </li>
           <li>this is normal</li>
-        </ul>
+       
       </Section>
 
       <Section>
         <h2>Are you...</h2>
-        <ul>
+   
           <li>hungry?</li>
           <li>thirsty?</li>
           <li>too warm or too cold?</li>
           <li>overwhelmed by noise?</li>
           <li>in an uncomfortable social situation?</li>
-        </ul>
+       
       </Section>
 
       <Section>
         <h2>Try...</h2>
-        <ul>
+      
           <li>
             moving around in your environment; even standing on the other side
             of the room can help
@@ -61,7 +61,7 @@ const Psychedelic: FC = () => (
           <li>changing the music to something light or upbeat</li>
           <li>thinking of someone you love</li>
           <li>wrapping yourself in a blanket</li>
-        </ul>
+       
       </Section>
 
       <BreatheSection />

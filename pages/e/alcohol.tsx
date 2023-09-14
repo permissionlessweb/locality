@@ -10,7 +10,7 @@ import {
   RecoveryPositionSection,
   Section,
   Signs,
-} from "../../components/salvum/emergency"
+} from "../../components/salvum/emergency/emergency"
 import Header from "../../components/salvum/header"
 import React from "react"
 
@@ -70,7 +70,7 @@ const AlcoholPoisoning: FC = () => (
 
       <Section>
         <h2>Things to keep in mind...</h2>
-        <ul>
+
           <li>Try to keep them awake and sitting up.</li>
           <li>
             If they are passed out or cannot sit upright, place them in the
@@ -88,7 +88,7 @@ const AlcoholPoisoning: FC = () => (
             Attempts to sober them up, such as a shower or stimulants (including
             caffeine), will not help and are likely dangerous.
           </li>
-        </ul>
+      
       </Section>
 
       <RecoveryPositionSection />

@@ -5,7 +5,7 @@ import { IconType } from "react-icons"
 import { IoOpenOutline } from "react-icons/io5"
 import { IoCallOutline, IoChatbubblesOutline } from "react-icons/io5"
 
-import Breathe from "./breath"
+import Breathe from "../breath"
 import React from "react"
 
 interface Props {
@@ -89,7 +89,7 @@ export const Signs: FC<SignsProps> = ({ signs }) => (
         <div className="signIconWrapper">
           <Icon size={40} color="#ffffff" />
         </div>
-        <p>{label}</p>
+        <p className="text">{label}</p>
       </div>
     ))}
   </div>
@@ -98,7 +98,7 @@ export const Signs: FC<SignsProps> = ({ signs }) => (
 export const RecoveryPositionSection: FC<SectionProps> = (props) => (
   <Section {...props}>
     <h2>Recovery position</h2>
-    <p>
+    <p className="white">
       If they are unconscious, or if you must leave them alone (even for a
       minute), place them in the recovery position so they cannot choke on their
       own vomit.
@@ -111,7 +111,6 @@ export const RecoveryPositionSection: FC<SectionProps> = (props) => (
       height={150}
     />
 
-    <ul>
       <li>
         Ensure their airway is clear (remove anything inside their mouth).
       </li>
@@ -122,7 +121,7 @@ export const RecoveryPositionSection: FC<SectionProps> = (props) => (
       </li>
       <li>Turn their face to the side, optionally resting it on their arm.</li>
       <li>Position their chin up so their throat is open.</li>
-    </ul>
+ 
 
     <RowLink
       label="Photograph by Rama, Wikimedia Commons, Cc-by-sa-2.0-fr"

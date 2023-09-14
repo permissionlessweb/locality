@@ -1,0 +1,201 @@
+@import "../styles/colors.scss";
+
+.header {
+  margin-bottom: 4px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  & > * {
+    background: $hover;
+    border: none;
+    outline: none;
+    height: 100%;
+  }
+
+  a {
+    padding: 2px;
+    margin-right: 2px;
+
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search {
+    flex: 1;
+
+    padding: 16px 20px;
+
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  overflow-y: auto;
+
+  & > a > div {
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    padding: 10px 12px 10px 20px;
+
+    cursor: pointer;
+
+    &:hover {
+      background: $hover;
+    }
+    &:active {
+      background: $active;
+    }
+
+    p:nth-child(2) {
+      font-size: 14px;
+      margin-top: 2px;
+      color: $secondary;
+    }
+  }
+}
+
+.substanceContainer {
+  padding: 20px;
+
+  height: 100%;
+  overflow-y: auto;
+
+  h1 {
+    margin: 0;
+    font-size: 22px;
+    flex-shrink: 1;
+  }
+
+  p {
+    word-break: break-word;
+  }
+
+  .classes {
+    font-size: 17px;
+    color: $tertiary;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .summary {
+    color: $secondary;
+    margin-top: 25px;
+  }
+
+  h3 {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: normal;
+    color: $dim;
+
+    margin-top: 20px;
+    margin-bottom: 4px;
+  }
+
+  .roas {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    // clip so border radius cuts off corners of child buttons
+    overflow: hidden;
+
+    button {
+      padding: 10px 2px;
+
+      // safari has a default 2px margin for buttons??
+      // that might not be the issue but this is definitely the solution :)
+      margin: 0;
+
+      font-size: 18px;
+      &.small {
+        font-size: 15px;
+      }
+
+      flex: 1;
+
+      background: $active;
+      &.selected {
+        background: $hover;
+      }
+
+      &.only {
+        cursor: auto;
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  .group > * {
+    margin-top: 4px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .interactions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    button {
+      margin: 3px;
+      padding: 4px;
+      border-radius: 3px;
+
+      background: $hover;
+    }
+  }
+
+  .interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    border-radius: 4px;
+    background: $hover;
+
+    & > :first-child {
+      align-self: stretch;
+      margin-bottom: 20px;
+
+      & > svg {
+        margin-right: -30px;
+      }
+
+      h2 {
+        font-weight: normal;
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
+}
