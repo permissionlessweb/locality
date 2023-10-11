@@ -15,6 +15,9 @@ export const Hero = ({
   collectionInfo: SG721;
   mintBoxRef: React.RefObject<HTMLDivElement>;
 }) => {
+  const minterAddress = collectionInfo.minter;
+  const sg721Address = collectionAddr;
+
   const tokensQuery = useQuery<TokensMint>(TOKENS, {
     variables: { collectionAddr, limit: 10 },
   });
@@ -22,28 +25,7 @@ export const Hero = ({
   const statColor = useColorModeValue('#2C3137', '#EEF2F8');
   const titleColor = useColorModeValue('#697584', '#A7B4C2');
 
-  const images = useMemo(() => {
-    const tokens = tokensQuery.data?.tokens.tokens;
-    if (!tokens) return [];
-    return [
-      {
-        url: tokens[0].imageUrl,
-        cssProperties: { top: '40px' },
-      },
-      {
-        url: tokens[1].imageUrl,
-        cssProperties: { left: '160px', top: '-55px', zIndex: '40' },
-      },
-      {
-        url: tokens[2].imageUrl,
-        cssProperties: { right: '0', top: '80px', zIndex: '30' },
-      },
-      {
-        url: tokens[3].imageUrl,
-        cssProperties: { bottom: '-55px', left: '130px', zIndex: '20' },
-      },
-    ];
-  }, [tokensQuery.data?.tokens.tokens]);
+  const url = 'https://ipfs-gw.stargaze-apis.com/ipfs/bafybeibv3qytwd7n6vpmyng72ttk6wps46f42mvonigzgzdf63arlngcni/locality.png'
 
   const handleClick = () => {
     mintBoxRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -83,10 +65,9 @@ export const Hero = ({
       </Flex>
 
       <Box position="relative" flex="1 1 100%">
-        {images.map(({ url, cssProperties }) => {
+
           return (
             <Image
-              {...cssProperties}
               key={url}
               position="absolute"
               alt=""
@@ -95,8 +76,7 @@ export const Hero = ({
               src={getHttpUrl(url)}
             />
           );
-        })}
-      </Box>
+     </Box>
     </Flex>
   );
 };

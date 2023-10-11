@@ -13,7 +13,6 @@ export default function WhosInvolvedMsg() {
         justifyContent="end"
 
       >
-
         <Stack justifyContent='ce'>
         <chakra.h2
           color="gray.800"
@@ -69,7 +68,17 @@ export default function WhosInvolvedMsg() {
               }}
             >
 TerpNET Design DAO
+
             </chakra.p>
+            <chakra.p
+              mt={2}
+              color="gray.600"
+              _dark={{
+                color: "gray.200",
+              }}
+            >
+GlassFlow
+              </chakra.p>
             <br />
           </Box>
 

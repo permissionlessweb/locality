@@ -22,6 +22,7 @@ import {
   COLLECTION,
   COLLECTIONS_MINT,
   exponent,
+  localityContract,
 } from 'config';
 import { getPrices } from 'api';
 import dayjs from 'dayjs';
@@ -120,7 +121,7 @@ export const MintNfts = () => {
 
     getCollectionImage({
       variables: {
-        collectionAddr: contractsAddress.sg721,
+        collectionAddr: 'stars15f8hft9va3m5w3hxqyefmh7gzunty36t27h6tkdz7jdz06wanhxq9ruas6'
       },
     });
 
@@ -204,11 +205,11 @@ export const MintNfts = () => {
       );
 
       try {
-        const { minter: minterAddr } = await sg721QueryClient.minter();
+        const { minter: localityContract } = await sg721QueryClient.minter();
 
         const minterQueryClient = new VendingMinterQueryClient(
           signingCosmWasmClient,
-          minterAddr
+          localityContract
         );
 
         const [{ current_price: price }, { count: remainingTokens }] =
@@ -223,8 +224,8 @@ export const MintNfts = () => {
 
         if (remainingTokens && isLowPrice) {
           setContractsAddress({
-            minter: minterAddr,
-            sg721: collection.collectionAddr,
+            minter: localityContract,
+            sg721: 'stars15f8hft9va3m5w3hxqyefmh7gzunty36t27h6tkdz7jdz06wanhxq9ruas6',
           });
           break;
         }
