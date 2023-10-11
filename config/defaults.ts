@@ -13,7 +13,7 @@ export const CONSTANTS = {
 export const marketplaceContract =
   'stars1fvhcnyddukcqfnt7nlwv3thm5we22lyxyxylr9h77cvgkcn43xfsvgv0pl';
 
-export const localityContract = 
+export const localityTestnetContract = 
 'stars14j8cdprdeqfvx3a8vyrys9pwf4l3qwscr5qazxa06xzkhvvue5wq0crgvt'; 
 
 export const chainassets: AssetList = assets.find(

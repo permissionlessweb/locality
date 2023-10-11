@@ -41,14 +41,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex justifyContent="end" mb={4}>
-        <Button variant="outline" px={0} onClick={toggleColorMode}>
-          <Icon
-            as={colorMode === 'light' ? BsFillMoonStarsFill : BsFillSunFill}
-          />
-        </Button>
+      
       </Flex>
       <Box textAlign="center">
-        <Heading
+        {/* <Heading
           as="h1"
           fontSize={{ base: '3xl', md: '5xl' }}
           fontWeight="extrabold"
@@ -61,17 +57,8 @@ export default function Home() {
           fontWeight="bold"
           fontSize={{ base: '2xl', md: '4xl' }}
         >
-          <Text
-            as="span"
-            color={handleChangeColorModeValue(
-              colorMode,
-              'primary.500',
-              'primary.200'
-            )}
-          >
-
-          </Text>
-        </Heading>
+   
+        </Heading> */}
       </Box>
       <WalletSection />
       <MintNfts />

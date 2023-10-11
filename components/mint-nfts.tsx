@@ -22,7 +22,7 @@ import {
   COLLECTION,
   COLLECTIONS_MINT,
   exponent,
-  localityContract,
+  localityTestnetContract,
 } from 'config';
 import { getPrices } from 'api';
 import dayjs from 'dayjs';
@@ -205,11 +205,11 @@ export const MintNfts = () => {
       );
 
       try {
-        const { minter: localityContract } = await sg721QueryClient.minter();
+        const { minter: localityTestnetContract } = await sg721QueryClient.minter();
 
         const minterQueryClient = new VendingMinterQueryClient(
           signingCosmWasmClient,
-          localityContract
+          localityTestnetContract
         );
 
         const [{ current_price: price }, { count: remainingTokens }] =
@@ -224,7 +224,7 @@ export const MintNfts = () => {
 
         if (remainingTokens && isLowPrice) {
           setContractsAddress({
-            minter: localityContract,
+            minter: localityTestnetContract,
             sg721: 'stars15f8hft9va3m5w3hxqyefmh7gzunty36t27h6tkdz7jdz06wanhxq9ruas6',
           });
           break;

@@ -40,66 +40,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex justifyContent="end" mb={4}>
-        <Button variant="outline" px={0} onClick={toggleColorMode}>
-          <Icon
-            as={colorMode === 'light' ? BsFillMoonStarsFill : BsFillSunFill}
-          />
-        </Button>
+  
       </Flex>
       <Box textAlign="center">
-        <Heading
-          as="h1"
-          fontSize={{ base: '3xl', md: '5xl' }}
-          fontWeight="extrabold"
-          mb={3}
-        >
-          Create Cosmos App
-        </Heading>
-        <Heading
-          as="h1"
-          fontWeight="bold"
-          fontSize={{ base: '2xl', md: '4xl' }}
-        >
-          <Text as="span">Welcome to&nbsp;</Text>
-          <Text
-            as="span"
-            color={handleChangeColorModeValue(
-              colorMode,
-              'primary.500',
-              'primary.200'
-            )}
-          >
-            CosmosKit&nbsp;+&nbsp;Next.js&nbsp;+&nbsp;
-            <Link href={library.href} target="_blank" rel="noreferrer">
-              {library.title}
-            </Link>
-          </Text>
-        </Heading>
+    
       </Box>
-      <WalletSection />
+      {/* <WalletSection /> */}
       <SellNfts />
       <Box mb={16}>
         <Divider />
       </Box>
-      <Grid
-        templateColumns={{
-          md: 'repeat(2, 1fr)',
-          lg: 'repeat(3, 1fr)',
-        }}
-        gap={8}
-        mb={14}
-      >
-        {products.map((product) => (
-          <Product key={product.title} {...product} />
-        ))}
-      </Grid>
-      <Grid templateColumns={{ md: 'repeat(3, 1fr)' }} gap={8} mb={20}>
-        <Dependency {...library} />
-        {dependencies.map((dependency) => (
-          <Dependency key={dependency.title} {...dependency} />
-        ))}
-      </Grid>
-
+   
       <Box mb={3}>
         <Divider />
       </Box>
