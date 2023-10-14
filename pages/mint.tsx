@@ -43,23 +43,6 @@ export default function Home() {
       <Flex justifyContent="end" mb={4}>
       
       </Flex>
-      <Box textAlign="center">
-        {/* <Heading
-          as="h1"
-          fontSize={{ base: '3xl', md: '5xl' }}
-          fontWeight="extrabold"
-          mb={3}
-        >
-          Genesis Raffle - GlassFlow
-        </Heading>
-        <Heading
-          as="h1"
-          fontWeight="bold"
-          fontSize={{ base: '2xl', md: '4xl' }}
-        >
-   
-        </Heading> */}
-      </Box>
       <WalletSection />
       <MintNfts />
       <Box mb={16}>

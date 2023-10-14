@@ -11,6 +11,9 @@ import { FiCamera, FiHome } from "react-icons/fi";
 import { IoArrowDown, IoMailOutline, IoNewspaperOutline, IoWalletOutline, IoWarningOutline } from "react-icons/io5";
 import router from "next/router";
 import FeaturesPopoverModal from "./features-popover";
+
+
+
 function Navbar() {
   const { toggleColorMode: toggleMode } = useColorMode();
   const ref = React.useRef<HTMLDivElement>(null);
@@ -36,6 +39,9 @@ function Navbar() {
   }
   function toEmergency() {
     router.push('/emergency');
+  }
+  function toPress() {
+    window.location.href = 'https://daodao.zone/dao/juno1zdgyyzm34q22vmyz247evnzzls6kclun7v8l5ncjzlv7w2l4lvvqsevqe2/press';
   }
   
 
@@ -71,7 +77,7 @@ function Navbar() {
       >
        Home
       </Button>
-      <Button w="full" variant="ghost" leftIcon={<IoNewspaperOutline />}>
+      <Button onClick={toPress} w="full" variant="ghost" leftIcon={<IoNewspaperOutline />}>
         Blog 
       </Button>
   
@@ -123,6 +129,7 @@ function Navbar() {
                     md: "flex",
                   }}
                 >
+                   <Link>
                         <Button
                     bg={bg}
                     color="gray.500"
@@ -135,28 +142,10 @@ function Navbar() {
                     _focus={{
                       boxShadow: "none",
                     }}
-                    onClick={toRegistration}
                   >
                     Blog 
                   </Button>
-                          <Button
-                    bg={bg}
-                    color="gray.500"
-                    display="inline-flex"
-                    alignItems="center"
-                    fontSize="md"
-                    _hover={{
-                      color: cl,
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                    onClick={toRegistration}
-                  >
-                    Register Now
-                  </Button>
-       
-            
+                 </Link>
                   <FeaturesPopoverModal/>
             
                 </HStack>

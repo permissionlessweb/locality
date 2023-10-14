@@ -10,9 +10,10 @@ import {
 } from "../../components/salvum/emergency/emergency"
 import Header from "../../components/salvum/header"
 import React from "react"
+import { Box } from "@chakra-ui/react"
 
 const Weed: FC = () => (
-  <>
+<Box maxW="7xl" mx="auto">
     <Head>
       <title>Salvum | Too Much Weed</title>
       <meta
@@ -89,7 +90,7 @@ const Weed: FC = () => (
 
       <PeerSupportResourcesSection />
     </Container>
-  </>
+  </Box>
 )
 
 export default Weed

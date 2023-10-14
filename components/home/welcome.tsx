@@ -1,10 +1,25 @@
 import { chakra, Stack , Box, Text, Button} from "@chakra-ui/react";
+import { LargeButton } from "components/base";
 import router from "next/router";
 import React from "react";
 
 
 export default function WelcomeMsg ()  {
 
+  
+  const ToMint = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth', // You can use 'auto' for an instant scroll
+    });
+  };
+
+  const ToDocs = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth', // You can use 'auto' for an instant scroll
+    });
+  };
   function toRegistration() {
     router.push('/register');
 
@@ -63,6 +78,11 @@ export default function WelcomeMsg ()  {
                 }}
               >
             <Text
+               fontSize={{
+                base: "4xl",
+                sm: "5xl",
+                md: "6xl",
+              }}
             display={{
               base: "block",
               lg: "inline",
@@ -129,6 +149,21 @@ export default function WelcomeMsg ()  {
                     bg: "white.500",
                     color: "white.200"
                   }}  rounded="md" shadow="md">
+                         <LargeButton
+            width="260px"
+            btnContent="Mint Now"
+            handleClick={ToMint}
+
+          />
+                    <Box mt="auto" padding="4px">
+     
+        
+        </Box>
+        <LargeButton
+            width="260px"
+            btnContent="Read The Docs"
+            handleClick={ToDocs}
+          />
                 </Box>
               </Stack>
             </Box>

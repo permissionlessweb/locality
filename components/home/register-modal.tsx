@@ -1,4 +1,4 @@
-import { Flex, chakra, Stack, Box, Link } from "@chakra-ui/react";
+import { Flex, chakra, Stack, Box, Link, Center } from "@chakra-ui/react";
 import router from "next/router";
 
 
@@ -9,37 +9,20 @@ export default function RegisterMsg() {
 
   }
     return (
-        <Flex
-        bg="#edf3f8"
-        _dark={{
-          bg: "#3e3e3e",
-        }}
-        p={50}
-        w="full"
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Flex
-          justify="center"
-          bg="white"
-          _dark={{
-            bg: "gray.800",
-          }}
-          w="full"
-        >
-          <Box
-            w={{
-              base: "full",
-              md: "75%",
-              lg: "50%",
-            }}
-            px={4}
-            py={20}
-            textAlign={{
-              base: "left",
-              md: "center",
-            }}
-          >
+      <Flex
+      bg="#edf3f8"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      p={50}
+      w="full"
+      alignItems='flex-start'
+      justifyContent="center"
+
+    >
+      <Center>
+            <Stack justifyContent='ce'>
+       
             <chakra.span
               fontSize={{
                 base: "3xl",
@@ -63,7 +46,7 @@ export default function RegisterMsg() {
             bgGradient="linear(to-r, green.400,purple.500)"
             fontWeight="extrabold">
            
-          Eager to Help?</chakra.span>
+          Wanna Collab?</chakra.span>
               <chakra.span
                 display="block"
                 color="brand.600"
@@ -71,7 +54,7 @@ export default function RegisterMsg() {
                   color: "gray.500",
                 }}
               >
-                Lets do it! Register Here.
+                Let's Collab.
               </chakra.span>
             </chakra.span>
             <Stack
@@ -117,13 +100,13 @@ export default function RegisterMsg() {
                     },
                   }}
                 >
-                   Register Here
+                   Sign Up Here
                 </Link>
               </Box>
-            
             </Stack>
-          </Box>
-        </Flex>
+
+        </Stack>
+        </Center>
       </Flex>
     
     )

@@ -14,9 +14,10 @@ import {
 } from "../../components/salvum/emergency/emergency"
 import Header from "../../components/salvum/header"
 import React from "react"
+import { Box } from "@chakra-ui/react"
 
 const OpioidPoisoning: FC = () => (
-  <>
+  <Box maxW="7xl" mx="auto">
     <Head>
       <title>Salvum | Opioid Overdose</title>
       <meta
@@ -168,7 +169,7 @@ const OpioidPoisoning: FC = () => (
 
       <RecoveryPositionSection />
     </Container>
-  </>
+  </Box>
 )
 
 export default OpioidPoisoning

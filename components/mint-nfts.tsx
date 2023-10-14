@@ -9,6 +9,7 @@ import {
   Spinner,
   Text,
   useColorModeValue,
+  Button,
 } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React, { useEffect, useRef, useState } from 'react';
@@ -39,6 +40,7 @@ import { useQuery, useLazyQuery } from '@apollo/client';
 import { getHttpUrl, toDisplayAmount } from 'utils';
 import { Hero } from './mint/hero';
 import { useTx } from 'hooks';
+import { IoBookOutline, IoWarningOutline } from 'react-icons/io5';
 
 dayjs.extend(relativeTime);
 
@@ -357,16 +359,16 @@ export const MintNfts = () => {
   if (collectionsQuery.error) {
     return <pre>{collectionsQuery.error.message}</pre>;
   }
+  function toPress() {
+    window.location.href = 'https://daodao.zone/dao/juno1zdgyyzm34q22vmyz247evnzzls6kclun7v8l5ncjzlv7w2l4lvvqsevqe2/press';
+  }
 
   return (
     <>
       {contractsAddress?.sg721 && data.collectionInfo?.sg721 && (
-        <Hero
-          collectionAddr={contractsAddress?.sg721}
-          collectionInfo={data.collectionInfo?.sg721}
-          mintBoxRef={mintBoxRef}
-        />
+       <></>
       )}
+      
       <Flex
         w="816px"
         minH="595px"
@@ -381,21 +383,32 @@ export const MintNfts = () => {
         ref={mintBoxRef}
       >
         <Text
+          fontSize={{
+            base: "4xl",
+            sm: "5xl",
+            md: "4xl",
+          }}
           fontWeight="600"
-          fontSize="20px"
           color={statColor}
           mb="30px"
           lineHeight="shorter"
         >
-          NFT Mint
+          Genesis Mint - Open Edition Raffle Tokens
         </Text>
+ 
 
         {!address ? (
+          <>
           <Center h="100%" flex="1 1 100%">
             <Text fontWeight="600" fontSize="20px" color={titleColor}>
               Please connect the wallet
             </Text>
+      
           </Center>
+                <Button onClick={toPress} w="full" variant="ghost" leftIcon={<IoBookOutline />}>
+                Read Our Press Release Here
+                      </Button>
+                      </>
         ) : isLoading || collectionsQuery.loading ? (
           <Center h="100%" flex="1 1 100%">
             <Spinner

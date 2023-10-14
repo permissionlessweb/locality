@@ -1,7 +1,9 @@
 import { Flex, Stack, chakra, Box ,Link, Text,} from "@chakra-ui/react";
+import RegisterMsg from "./register-modal";
 
 export default function WhosInvolvedMsg() {
     return(
+      <>
         <Flex
         bg="#edf3f8"
         _dark={{
@@ -29,7 +31,7 @@ export default function WhosInvolvedMsg() {
           }}
           fontWeight="bold"
         >
-          Whos Involved
+          Whos Involved?
         </chakra.h2>
           <Box
             w="md"
@@ -43,10 +45,13 @@ export default function WhosInvolvedMsg() {
             shadow="lg"
             rounded="lg"
           >
-
-
             <Flex justifyContent="start" mt={4}>
             <Text
+                 fontSize={{
+                  base: "3xl",
+                  sm: "2xl",
+                  md: "3xl",
+                }}
             display={{
               base: "block",
               lg: "inline",
@@ -55,7 +60,6 @@ export default function WhosInvolvedMsg() {
             bgClip="text"
             bgGradient="linear(to-r, green.400,purple.500)"
             fontWeight="extrabold"
-            fontSize="xl"
           >
                General Operations
               </Text>
@@ -80,24 +84,14 @@ TerpNET Design DAO
 GlassFlow
               </chakra.p>
             <br />
-          </Box>
-
-          <Box
-            w="md"
-            mx="auto"
-            py={4}
-            px={8}
-            bg="white"
-            _dark={{
-              bg: "gray.800",
-            }}
-            shadow="lg"
-            rounded="lg"
-          >
-
 
             <Flex justifyContent="start" mt={4}>
             <Text
+            fontSize={{
+              base: "3xl",
+              sm: "2xl",
+              md: "3xl",
+            }}
             display={{
               base: "block",
               lg: "inline",
@@ -106,7 +100,6 @@ GlassFlow
             bgClip="text"
             bgGradient="linear(to-r, green.400,purple.500)"
             fontWeight="extrabold"
-            fontSize="xl"
           >
                 Artists 
               </Text>
@@ -120,26 +113,13 @@ GlassFlow
             >
                 Source Visuals
             </chakra.p>
-            <br />
-          </Box>
-
-
-          <Box
-            w="md"
-            mx="auto"
-            py={4}
-            px={8}
-            bg="white"
-            _dark={{
-              bg: "gray.800",
-            }}
-            shadow="lg"
-            rounded="lg"
-          >
-
-
             <Flex justifyContent="start" mt={4}>
             <Text
+                        fontSize={{
+                          base: "3xl",
+                          sm: "2xl",
+                          md: "3xl",
+                        }}
             display={{
               base: "block",
               lg: "inline",
@@ -148,9 +128,8 @@ GlassFlow
             bgClip="text"
             bgGradient="linear(to-r, green.400,purple.500)"
             fontWeight="extrabold"
-            fontSize="xl"
           >
-                Harm Reduction Specialist
+                Harm Reduction 
               </Text>
             </Flex>
             <chakra.p
@@ -162,9 +141,15 @@ GlassFlow
             >
                 Celestial Spaces
             </chakra.p>
-            <br />
           </Box>
+
+         
+
+          
         </Stack>
+
       </Flex>
+      <RegisterMsg/>
+      </>
     )
 }

@@ -3,6 +3,7 @@ import Link from "next/link"
 import React, { FC, useState } from "react"
 import PuffLoader from "react-spinners/PuffLoader"
 import { Container } from "../components/salvum/emergency/emergency"
+import { Box } from "@chakra-ui/react"
 
 const pages = [
   {
@@ -27,7 +28,7 @@ const EmergencyPage: FC = () => {
   const [loadingHref, setLoadingHref] = useState(null as string | null)
 
   return (
-    <>
+    <Box maxW="7xl" mx="auto">
       <Head>
         <title>Salvum | Emergency</title>
         <meta
@@ -64,7 +65,7 @@ const EmergencyPage: FC = () => {
           hurting themself or others.
         </p>
       </div></Container>
-    </>
+</Box>
   )
 }
 

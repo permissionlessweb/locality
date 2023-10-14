@@ -27,7 +27,7 @@ import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
 import { dependencies, products } from '../config';
 import NextLink from 'next/link';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { Product, Dependency, handleChangeColorModeValue } from '../components';
+import { Product, Dependency, handleChangeColorModeValue, MintNfts } from '../components';
 import { MdCheckCircle, MdSettings } from 'react-icons/md';
 import WelcomeMsg from 'components/home/welcome';
 import HowItWorksMsg from 'components/home/how-it-works';
@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <div className='site-background'>
-    <Container maxW="5xl" py={10}>
+      <Container maxW="5xl" py={10}>
 
         <Head>
           <title>Locality</title>
@@ -55,35 +55,32 @@ export default function Home() {
 
         <Box textAlign="center">
 
-    <Box pos="relative" overflow="hidden">
-      <WelcomeMsg />
-    <HowItWorksMsg/>
-    <WhosInvolvedMsg/>
-    </Box>
+          <Box pos="relative" overflow="hidden">
+            <WelcomeMsg />
+            <HowItWorksMsg />
+            <WhosInvolvedMsg />
+            <br />
+            <MintNfts />
+          </Box>
         </Box>
 
-
-
-
-
-<RegisterMsg/>
         <Stack
           isInline={true}
           spacing={1}
           justifyContent="center"
           opacity={0.5}
           fontSize="sm"
-          >
+        >
           <Text>Built with</Text>
           <Link
             href="https://cosmology.tech/"
             target="_blank"
             rel="noopener noreferrer"
-            >
+          >
             Cosmology
           </Link>
         </Stack>
-        </Container>
+      </Container>
     </div>
   );
 }

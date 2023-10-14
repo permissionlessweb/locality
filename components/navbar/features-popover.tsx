@@ -174,7 +174,7 @@ const FeaturesPopoverModal = () => {
           }}
           rightIcon={<IoArrowDown />}
         >
-         Widgets
+         Harm-Reduction Widgets
         </Button>
       </PopoverTrigger>
 

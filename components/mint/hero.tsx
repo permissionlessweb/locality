@@ -33,50 +33,7 @@ export const Hero = ({
 
   return (
     <Flex w="100%" h="460px" mb="100px" py="85px" px="24px" gap="20px">
-      <Flex flex="1 1 100%" flexDir="column">
-        <Text
-          fontWeight="600"
-          fontSize="48px"
-          color={statColor}
-          lineHeight="shorter"
-          w="80%"
-          mb="18px"
-        >
-          {collectionInfo.name}
-        </Text>
-        <Text
-          w="85%"
-          fontWeight="400"
-          fontSize="16px"
-          lineHeight="shorter"
-          color={titleColor}
-        >
-          {(collectionInfo.description.length || 0) > 200
-            ? collectionInfo.description.slice(0, 200) + '...'
-            : collectionInfo.description}
-        </Text>
-        <Box mt="auto">
-          <LargeButton
-            width="260px"
-            btnContent="Mint Now"
-            handleClick={handleClick}
-          />
-        </Box>
-      </Flex>
-
-      <Box position="relative" flex="1 1 100%">
-
-          return (
-            <Image
-              key={url}
-              position="absolute"
-              alt=""
-              boxSize="180px"
-              borderRadius="6px"
-              src={getHttpUrl(url)}
-            />
-          );
-     </Box>
+     
     </Flex>
   );
 };
