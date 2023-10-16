@@ -383,16 +383,19 @@ export const MintNfts = () => {
         ref={mintBoxRef}
       >
         <Text
-          fontSize={{
-            base: "4xl",
-            sm: "5xl",
-            md: "4xl",
-          }}
-          fontWeight="600"
-          color={statColor}
-          mb="30px"
-          lineHeight="shorter"
-        >
+         fontSize={{
+          base: "4xl",
+          sm: "5xl",
+          md: "6xl",
+        }}
+      display={{
+        base: "block",
+        lg: "inline",
+      }}
+      w="full"
+      bgClip="text"
+      bgGradient="linear(to-r, green.400,purple.500)"
+      fontWeight="extrabold">
           Genesis Mint - Open Edition Raffle Tokens
         </Text>
  

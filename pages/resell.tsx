@@ -45,7 +45,7 @@ export default function Home() {
       <Box textAlign="center">
     
       </Box>
-      {/* <WalletSection /> */}
+      <WalletSection />
       <SellNfts />
       <Box mb={16}>
         <Divider />
