@@ -1,39 +1,44 @@
-import { Flex, Stack, chakra, Box ,Link, Text,} from "@chakra-ui/react";
-import RegisterMsg from "./register-modal";
+import { Box, Flex, Link, Stack, chakra, Text, Center} from "@chakra-ui/react";
+
 
 export default function WhosInvolvedMsg() {
-    return(
-      <>
-        <Flex
-        bg="#edf3f8"
-        _dark={{
-          bg: "#3e3e3e",
-        }}
-        p={50}
-        w="full"
-        alignItems='flex-start'
-        justifyContent="end"
+  return (
+    <>
 
-      >
-        <Stack justifyContent='ce'>
-        <chakra.h2
-          color="gray.800"
-          _dark={{
-            color: "white",
+    <Flex
+      bg="#edf3f8"
+      _dark={{
+        bg: "#3e3e3e",
+      }}
+      p={50}
+      w="full"
+      alignItems='flex-center'
+      justifyContent="center"
+
+    >
+
+<Box bg="#edf3f8"
+      _dark={{
+        bg: "#3e3e3e",
           }}
+          >    <chakra.span
           fontSize={{
-            base: "2xl",
-            md: "3xl",
+            base: "3xl",
+            sm: "4xl",
           }}
-          mt={{
-            base: 2,
-            md: 0,
+          fontWeight="extrabold"
+          letterSpacing="tight"
+          lineHeight="shorter"
+          color="gray.900"
+          _dark={{
+            color: "gray.100",
           }}
-          fontWeight="bold"
+          mb={6}
         >
-          Whos Involved?
-        </chakra.h2>
-          <Box
+          Who's Involved?
+        </chakra.span>
+        
+        <Box
             w="md"
             mx="auto"
             py={4}
@@ -142,14 +147,9 @@ GlassFlow
                 Celestial Spaces
             </chakra.p>
           </Box>
-
-         
-
-          
-        </Stack>
-
-      </Flex>
-      <RegisterMsg/>
-      </>
-    )
+</Box>
+      
+    </Flex>
+    </>
+  )
 }

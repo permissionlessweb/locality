@@ -30,6 +30,7 @@ export enum WalletStatus {
 }
 
 export interface ConnectWalletType {
+  width: string;
   buttonText?: string;
   isLoading?: boolean;
   isDisabled?: boolean;

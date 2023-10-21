@@ -1,7 +1,8 @@
-import { chakra, Stack , Box, Text, Button} from "@chakra-ui/react";
+import { chakra, Stack , Box, Text, Button, Flex} from "@chakra-ui/react";
 import { LargeButton } from "components/base";
 import router from "next/router";
 import React from "react";
+import RegisterMsg from "./register-modal";
 
 
 export default function WelcomeMsg ()  {
@@ -25,6 +26,7 @@ export default function WelcomeMsg ()  {
 
   }
     return (
+      <>
         <Box maxW="7xl" mx="auto">
         <Box
           pos="relative"
@@ -165,10 +167,177 @@ export default function WelcomeMsg ()  {
             handleClick={ToDocs}
           />
                 </Box>
-              </Stack>
-            </Box>
+              </Stack>     
+            </Box>  
           </Box>
         </Box>
+    
+ <Box bg="#edf3f8"
+      _dark={{
+        bg: "#3e3e3e",
+          }}
+          >
+    
+    <chakra.span
+       fontSize={{
+        base: "3xl",
+        sm: "4xl",
+      }}
+      fontWeight="extrabold"
+      letterSpacing="tight"
+      lineHeight="shorter"
+      color="gray.900"
+      _dark={{
+        color: "gray.100",
+      }}
+      mb={6}
+              >
+          What's The Plan?
+        </chakra.span>
+    <Box
+      w="md"
+      mx="auto"
+      py={4}
+      px={8}
+      bg="white"
+      _dark={{
+        bg: "gray.800",
+      }}
+      shadow="lg"
+      rounded="lg"
+    >
+
+
+      <Flex justifyContent="center" mt={4}>
+        <Text
+          fontSize={{
+            base: "3xl",
+            sm: "2xl",
+            md: "3xl",
+          }}
+          display={{
+            base: "block",
+            lg: "inline",
+          }}
+          w="full"
+          bgClip="text"
+          bgGradient="linear(to-r, green.400,purple.500)"
+          fontWeight="extrabold"
+        >
+          1. Collaborative NFT Collection
+        </Text>
+      </Flex>
+      <chakra.p
+        mt={2}
+        color="gray.600"
+        _dark={{
+          color: "gray.200",
+        }}
+      >
+        1,111 pieces of art made by various artist will be tokenized & deployed for sale on-chain.
+      </chakra.p>
+      <br />
+    </Box>
+    
+<br/>
+    <Box
+      w="md"
+      mx="auto"
+      py={4}
+      px={8}
+      bg="white"
+      _dark={{
+        bg: "gray.800",
+      }}
+      shadow="lg"
+      rounded="lg"
+      justifyContent="center"
+    >
+
+
+      <Flex justifyContent="center" mt={4}>
+        <Text
+          fontSize={{
+            base: "3xl",
+            sm: "2xl",
+            md: "3xl",
+          }}
+          display={{
+            base: "block",
+            lg: "inline",
+          }}
+          w="full"
+          bgClip="text"
+          bgGradient="linear(to-r, green.400,purple.500)"
+          fontWeight="extrabold"
+        >
+          2. Non-Profit DAO
+        </Text>
+      </Flex>
+      <chakra.p
+        mt={2}
+        color="gray.600"
+        _dark={{
+          color: "gray.200",
+        }}
+      >
+        All funding from the sale of the nft collection will automatically route to a treasury managed by members of the DAO.
+      </chakra.p>
+      <br />
+    </Box>
+<br/>
+    <Box
+      w="md"
+      mx="auto"
+      py={4}
+      px={8}
+      bg="white"
+      _dark={{
+        bg: "gray.800",
+      }}
+      shadow="lg"
+      rounded="lg"
+    >
+
+
+      <Flex justifyContent="center" mt={4}>
+        <Text
+          fontSize={{
+            base: "3xl",
+            sm: "2xl",
+            md: "3xl",
+          }}
+          display={{
+            base: "block",
+            lg: "inline",
+          }}
+          w="full"
+          bgClip="text"
+          bgGradient="linear(to-r, green.400,purple.500)"
+          fontWeight="extrabold"
+        >
+          3. Strategy & Resource Generation
+        </Text>
+      </Flex>
+      <chakra.p
+        mt={2}
+        color="gray.600"
+        _dark={{
+          color: "gray.200",
+        }}
+      >
+        Resources for various stratigies we can take as a DAO.
+      </chakra.p>
+      <br />
+    </Box>
+    <br/>
       </Box>
+
+<br/>
+
+
+      </Box>
+
+      </>
     )
 }

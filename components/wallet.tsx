@@ -63,6 +63,7 @@ export const WalletSection = () => {
   // Components
   const connectWalletButton = (
     <WalletConnectComponent
+      width="260px"
       walletStatus={status}
       disconnect={
         <Disconnected buttonText="Connect Wallet" onClick={onClickConnect} />
