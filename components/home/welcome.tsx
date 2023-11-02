@@ -224,7 +224,7 @@ export default function WelcomeMsg ()  {
           bgGradient="linear(to-r, green.400,purple.500)"
           fontWeight="extrabold"
         >
-          1. Collaborative NFT Collection
+          1. On-Chain Raffle
         </Text>
       </Flex>
       <chakra.p
@@ -234,7 +234,7 @@ export default function WelcomeMsg ()  {
           color: "gray.200",
         }}
       >
-        1,111 pieces of art made by various artist will be tokenized & deployed for sale on-chain.
+        A 1/1 functional glass art piece is being raffled to raise funds. Raffle tickets are minted on a public blockchain, sprouting accountability for funds raised.
       </chakra.p>
       <br />
     </Box>
@@ -326,7 +326,7 @@ export default function WelcomeMsg ()  {
           color: "gray.200",
         }}
       >
-        Resources for various stratigies we can take as a DAO.
+      Decide on stratigies we can take as a community, or request for support to provide to your local community .
       </chakra.p>
       <br />
     </Box>

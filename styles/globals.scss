@@ -1345,14 +1345,9 @@ a:hover {
   padding-left: 3px;
 }
 .medium-text {
-  font-weight: 500;
+  font-weight:bolder;
   font-size: 1.5rem;
   line-height: 1.5; /* this value can vary depending on your design */
-  color: #333333;
+  color: #48BB78;
 }
 
-@media (prefers-color-scheme: dark) {
-  .medium-text {
-    color: #f8f8f8;
-  }
-}

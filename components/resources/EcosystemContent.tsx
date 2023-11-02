@@ -1,17 +1,9 @@
 import { Button, Center } from '@chakra-ui/react';
 import { networkData } from './networks';
 import React, { useState, useEffect } from "react";
+import Network  from './content';
 
-type Network = {
-    network: string;
-    description: string;
-    icon: string;
-    name: string;
-    status: string;
-    wikilink: string;
-}
-
-const EcosystemContent = () => {
+export const EcosystemContent = () => {
     const [availableNetwork, setAvailableNetwork] = useState<Network[]>();
     const [active, setActive] = useState<string>("1");
 
@@ -61,7 +53,7 @@ const EcosystemContent = () => {
                 return item.name === "Policy";
             }));
         }
-    }
+    };
 
     useEffect(() => {
         setAvailableNetwork(networkData);
@@ -69,8 +61,8 @@ const EcosystemContent = () => {
 
     return (
         <section className="ecosystem-section">
-   
-            
+            <div className="container">
+
                 <Center>
                     <p className="sub-heading">
                     </p></Center>
@@ -86,13 +78,13 @@ const EcosystemContent = () => {
                         className={active === "2" ? "active" : undefined}
                         id={"2"}
                         onClick={handleClick}
-                    >HOTLINES - USA</Button>
-                        <Button
+                    >HOTLINES</Button>
+                    <Button
                         key={3}
                         className={active === "3" ? "active" : undefined}
                         id={"3"}
                         onClick={handleClick}
-                    >HOTLINES - GLOBAL</Button>
+                    >HOTLINES - Global</Button>
                     <Button
                         key={4}
                         className={active === "4" ? "active" : undefined}
@@ -104,26 +96,19 @@ const EcosystemContent = () => {
                         className={active === "5" ? "active" : undefined}
                         id={"5"}
                         onClick={handleClick}
-                    >MANUALS</Button>
+                    >PRODUCTS</Button>
                     <Button
                         key={6}
                         className={active === "6" ? "active" : undefined}
                         id={"6"}
                         onClick={handleClick}
-                    >INTEGRATION</Button>
+                    >SERVICES</Button>
                     <Button
                         key={7}
                         className={active === "7" ? "active" : undefined}
                         id={"7"}
                         onClick={handleClick}
-                    >EDUCATION</Button>
-                     <Button
-                        key={8}
-                        className={active === "8" ? "active" : undefined}
-                        id={"8"}
-                        onClick={handleClick}
-                    >POLICY</Button>
-
+                    >COMMUNITIES</Button>
 
                 </div>
                 <div className="network-section">
@@ -134,19 +119,16 @@ const EcosystemContent = () => {
                                 <h6>{item.description}</h6>
                                 <span className={'networkname'}>{item.name}</span>
                                 <span className={'status'}>
-                                    {
-                                        item.status === 'ComingSoon' ?
-                                            <span className={'nodot'}></span> : <span className={'dot'}></span>
-                                    }
+                                    {item.status === 'ComingSoon' ?
+                                        <span className={'nodot'}></span> : <span className={'dot'}></span>}
                                     &nbsp;{item.status}</span>
                             </div> </a>
                     ))}
 
                 </div>
 
-        
+            </div>
         </section>
 
-    )
-}
-export default EcosystemContent;
+    );
+};
