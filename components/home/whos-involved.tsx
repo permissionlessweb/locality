@@ -1,44 +1,39 @@
-import { Box, Flex, Link, Stack, chakra, Text, Center} from "@chakra-ui/react";
-
+import { Flex, Stack, chakra, Box, Link, Text, } from "@chakra-ui/react";
+import RegisterMsg from "./register-modal";
 
 export default function WhosInvolvedMsg() {
   return (
     <>
+      <Flex
+        bg="#edf3f8"
+        _dark={{
+          bg: "#3e3e3e",
+        }}
+        p={50}
+        w="full"
+        alignItems='flex-start'
+        justifyContent="end"
 
-    <Flex
-      bg="#edf3f8"
-      _dark={{
-        bg: "#3e3e3e",
-      }}
-      p={50}
-      w="full"
-      alignItems='flex-center'
-      justifyContent="center"
-
-    >
-
-<Box bg="#edf3f8"
-      _dark={{
-        bg: "#3e3e3e",
-          }}
-          >    <chakra.span
-          fontSize={{
-            base: "3xl",
-            sm: "4xl",
-          }}
-          fontWeight="extrabold"
-          letterSpacing="tight"
-          lineHeight="shorter"
-          color="gray.900"
-          _dark={{
-            color: "gray.100",
-          }}
-          mb={6}
-        >
-          Who's Involved?
-        </chakra.span>
-        
-        <Box
+      >
+        <Stack justifyContent='ce'>
+          <chakra.h2
+            color="gray.800"
+            _dark={{
+              color: "white",
+            }}
+            fontSize={{
+              base: "2xl",
+              md: "3xl",
+            }}
+            mt={{
+              base: 2,
+              md: 0,
+            }}
+            fontWeight="bold"
+          >
+            Whos Involved?
+          </chakra.h2>
+          <Box
             w="md"
             mx="auto"
             py={4}
@@ -50,23 +45,25 @@ export default function WhosInvolvedMsg() {
             shadow="lg"
             rounded="lg"
           >
+
+
             <Flex justifyContent="start" mt={4}>
-            <Text
-                 fontSize={{
+              <Text
+                fontSize={{
                   base: "3xl",
                   sm: "2xl",
                   md: "3xl",
                 }}
-            display={{
-              base: "block",
-              lg: "inline",
-            }}
-            w="full"
-            bgClip="text"
-            bgGradient="linear(to-r, green.400,purple.500)"
-            fontWeight="extrabold"
-          >
-               General Operations
+                display={{
+                  base: "block",
+                  lg: "inline",
+                }}
+                w="full"
+                bgClip="text"
+                bgGradient="linear(to-r, green.400,purple.500)"
+                fontWeight="extrabold"
+              >
+                Artists
               </Text>
             </Flex>
             <chakra.p
@@ -76,7 +73,64 @@ export default function WhosInvolvedMsg() {
                 color: "gray.200",
               }}
             >
-TerpNET Design DAO
+
+            </chakra.p>
+            <Flex justifyContent="start" mt={4}>
+              <Text
+                fontSize={{
+                  base: "3xl",
+                  sm: "2xl",
+                  md: "3xl",
+                }}
+                display={{
+                  base: "block",
+                  lg: "inline",
+                }}
+                w="full"
+                bgClip="text"
+                bgGradient="linear(to-r, green.400,purple.500)"
+                fontWeight="extrabold"
+              >
+                Harm Reduction &  <br />
+                Non-Profits
+              </Text>
+            </Flex>
+            <chakra.p
+              mt={2}
+              color="gray.600"
+              _dark={{
+                color: "gray.200",
+              }}
+            >
+            </chakra.p>
+
+            <Flex justifyContent="start" mt={4}>
+              <Text
+                fontSize={{
+                  base: "3xl",
+                  sm: "2xl",
+                  md: "3xl",
+                }}
+                display={{
+                  base: "block",
+                  lg: "inline",
+                }}
+                w="full"
+                bgClip="text"
+                bgGradient="linear(to-r, green.400,purple.500)"
+                fontWeight="extrabold"
+              >
+                General Operations
+              </Text>
+            </Flex>
+            <chakra.p
+              mt={2}
+              color="gray.600"
+              _dark={{
+                color: "gray.200",
+              }}
+            >
+              TerpNET Design DAO
 
             </chakra.p>
             <chakra.p
@@ -86,70 +140,17 @@ TerpNET Design DAO
                 color: "gray.200",
               }}
             >
-GlassFlow
-              </chakra.p>
+            </chakra.p>
             <br />
-
-            <Flex justifyContent="start" mt={4}>
-            <Text
-            fontSize={{
-              base: "3xl",
-              sm: "2xl",
-              md: "3xl",
-            }}
-            display={{
-              base: "block",
-              lg: "inline",
-            }}
-            w="full"
-            bgClip="text"
-            bgGradient="linear(to-r, green.400,purple.500)"
-            fontWeight="extrabold"
-          >
-                Artists 
-              </Text>
-            </Flex>
-            <chakra.p
-              mt={2}
-              color="gray.600"
-              _dark={{
-                color: "gray.200",
-              }}
-            >
-                Source Visuals
-            </chakra.p>
-            <Flex justifyContent="start" mt={4}>
-            <Text
-                        fontSize={{
-                          base: "3xl",
-                          sm: "2xl",
-                          md: "3xl",
-                        }}
-            display={{
-              base: "block",
-              lg: "inline",
-            }}
-            w="full"
-            bgClip="text"
-            bgGradient="linear(to-r, green.400,purple.500)"
-            fontWeight="extrabold"
-          >
-                Harm Reduction 
-              </Text>
-            </Flex>
-            <chakra.p
-              mt={2}
-              color="gray.600"
-              _dark={{
-                color: "gray.200",
-              }}
-            >
-                Celestial Spaces
-            </chakra.p>
           </Box>
-</Box>
-      
-    </Flex>
+
+
+
+
+        </Stack>
+
+      </Flex>
+      <RegisterMsg />
     </>
   )
 }

@@ -1,28 +1,33 @@
-import '../styles/globals.scss';
-import type { AppProps } from 'next/app';
-import { ChainProvider } from '@cosmos-kit/react';
-import { ChakraProvider } from '@chakra-ui/react';
-import { wallets as keplrWallets } from '@cosmos-kit/keplr';
-import { wallets as cosmostationWallets } from '@cosmos-kit/cosmostation';
-import { wallets as leapWallets } from '@cosmos-kit/leap';
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import '../styles/globals.css';
+import '@interchain-ui/react/styles';
 
+import { ChakraProvider } from '@chakra-ui/react';
+import type { AppProps } from 'next/app';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
+import { SignerOptions, wallets } from 'cosmos-kit';
+import { ChainProvider } from '@cosmos-kit/react';
 import { chains, assets } from 'chain-registry';
-import { getSigningCosmosClientOptions } from 'stargazejs';
+import { getSigningCosmosClientOptions } from 'stargaze-query';
 import { GasPrice } from '@cosmjs/stargate';
 
-import { SignerOptions } from '@cosmos-kit/core';
-import { defaultTheme } from 'config';
-import '@interchain-ui/react/styles';
-import Navbar from 'components/navbar';
+import { Box, ThemeProvider, Toaster, useTheme, useColorModeValue } from '@interchain-ui/react';
 
-const client = new ApolloClient({
-  uri: 'https://constellations-api.mainnet.stargaze-apis.com/graphql',
-  cache: new InMemoryCache(),
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 2,
+      refetchOnWindowFocus: false,
+    },
+  },
 });
 
 function CreateCosmosApp({ Component, pageProps }: AppProps) {
+  const { themeClass } = useTheme();
+
   const signerOptions: SignerOptions = {
+    // @ts-ignore
     signingStargate: () => {
       return getSigningCosmosClientOptions();
     },
@@ -37,30 +42,36 @@ function CreateCosmosApp({ Component, pageProps }: AppProps) {
   };
 
   return (
-    <ChakraProvider theme={defaultTheme}>
-      <ChainProvider
-        chains={chains}
-        assetLists={assets}
-        wallets={[...keplrWallets, ...cosmostationWallets, ...leapWallets]}
-        walletConnectOptions={{
-          signClient: {
-            projectId: 'a8510432ebb71e6948cfd6cde54b70f7',
-            relayUrl: 'wss://relay.walletconnect.org',
-            metadata: {
-              name: 'Locality Collection',
-              description: 'Harm Reduction NFT Collection',
-              url: 'https://glassflow.nft/locality',
-              icons: [],
+    <ChakraProvider>
+      <ThemeProvider>
+        <ChainProvider
+          chains={chains}
+          assetLists={assets}
+          wallets={wallets}
+          walletConnectOptions={{
+            signClient: {
+              projectId: 'a8510432ebb71e6948cfd6cde54b70f7',
+              relayUrl: 'wss://relay.walletconnect.org',
+              metadata: {
+                name: 'CosmosKit Template',
+                description: 'CosmosKit dapp template',
+                url: 'https://docs.cosmology.zone/cosmos-kit/',
+                icons: [],
+              },
             },
-          },
-        }}
-        signerOptions={signerOptions}
+          }}
+          // @ts-ignore
+          signerOptions={signerOptions}
         >
-        <ApolloProvider client={client}>
-        <Navbar/>
-          <Component {...pageProps} />
-        </ApolloProvider>
-      </ChainProvider>
+          <QueryClientProvider client={queryClient}>
+            <Box className={themeClass} minHeight="100dvh" backgroundColor={useColorModeValue('$white', '$background')}>
+              <Component {...pageProps} />
+            </Box>
+          </QueryClientProvider>
+        </ChainProvider>
+
+        <Toaster position={'top-right'} closeButton={true} />
+      </ThemeProvider>
     </ChakraProvider>
   );
 }

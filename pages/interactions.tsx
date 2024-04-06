@@ -5,15 +5,16 @@ import { FC, useEffect, useMemo, useRef, useState } from "react"
 import { SWRConfig } from "swr"
 
 import Interaction, { InteractionDisclaimer } from "../components/salvum/interaction"
-import { useInteractions } from "../helpers/swr"
-import { getInteractions } from "../services/data"
 import {
   InteractionSubstance,
   NextPageWithFallback,
   PlausibleEvents,
-} from "../types"
+} from "../utils/types"
 import styles from "../styles/interactions.module.scss"
 import { Container, Text } from "@chakra-ui/react"
+import { useInteractions } from "@/utils/swr"
+import { getInteractions } from "@/services/interactions/data"
+import { Layout } from "@/components"
 
 const Interactions: FC = () => {
   const { interactions } = useInteractions()
@@ -82,7 +83,7 @@ const Interactions: FC = () => {
   )
 
   return (
-    <Container maxW="5xl" py={10}>
+    <Layout>
     <div className={styles.container}>
       <div className={styles.interactions}>
         {substanceLabels.map((substance) => (
@@ -118,7 +119,7 @@ const Interactions: FC = () => {
         <InteractionDisclaimer />
       </div>
     </div>
-    </Container>
+    </Layout>
   )
 }
 

@@ -6,8 +6,8 @@ import { IoArrowDown, IoWarning } from "react-icons/io5";
 function toHome() {
   router.push('/');
 }
-function toResources() {
-  router.push('/resources');
+function toSubstances() {
+  router.push('/substances');
 }
 function toEmergency() {
   router.push('/emergency');
@@ -97,13 +97,13 @@ const Features = (props: any) => {
          Choose two substances to view their interaction profile. 
         </Section>
 
-        <Section
-          href={toResources}
-          title="Support Resources"
+        {/* <Section
+          href={toSubstances}
+          title="Substances"
           
         >
-          mental health resources, crisis support, psychedelic integration, psychedelic support
-        </Section>
+          Search for information on substances   
+        </Section> */}
         <Section
           href={toBreathe}
           title="Breathe"

@@ -1,7 +1,6 @@
 import { assets } from 'chain-registry';
-import { AssetList, Asset } from '@chain-registry/types';
 
-export const chainName = 'stargazetestnet';
+export const CHAIN_NAME = 'stargaze';
 
 export const CONSTANTS = {
   LOCALITY_TWITTER: "https://twitter.com/",
@@ -10,20 +9,26 @@ export const CONSTANTS = {
 
 };
 
-export const marketplaceContract =
+export const STARGAZE_ADDRESS_LENGTH = 44;
+
+export const STARGAZE_MARKETPLACE_CONTRACT =
   'stars1fvhcnyddukcqfnt7nlwv3thm5we22lyxyxylr9h77cvgkcn43xfsvgv0pl';
 
-export const localityTestnetContract = 
-'stars14j8cdprdeqfvx3a8vyrys9pwf4l3qwscr5qazxa06xzkhvvue5wq0crgvt'; 
+export const STARGAZE_GRAPHQL_ENDPOINT =
+  'https://constellations-api.mainnet.stargaze-apis.com/graphql';
 
-export const chainassets: AssetList = assets.find(
-  (chain) => chain.chain_name === chainName
-) as AssetList;
+export const STARGATE_ASSETS = assets.find(
+  (chain) => chain.chain_name === CHAIN_NAME
+)!.assets;
 
-export const coin: Asset = chainassets.assets.find(
+export const STARGAZE_TOKEN = STARGATE_ASSETS.find(
   (asset) => asset.base === 'ustars'
-) as Asset;
+)!;
 
-export const exponent = coin.denom_units.find(
-  (unit) => unit.denom === coin.display
-)?.exponent as number;
+export const STARGAZE_TOKEN_DENOM = STARGAZE_TOKEN.base;
+
+export const STARGAZE_TOKEN_EXPONENT = STARGAZE_TOKEN.denom_units.find(
+  (unit) => unit.denom === STARGAZE_TOKEN.display
+)!.exponent;
+
+export const STARGAZE_COINGECKO_ID = STARGAZE_TOKEN.coingecko_id || 'stargaze';

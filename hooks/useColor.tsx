@@ -1,4 +1,4 @@
-import { useColorModeValue } from '@chakra-ui/react';
+import { useColorModeValue } from "@interchain-ui/react";
 
 export const useColor = () => {
   return {

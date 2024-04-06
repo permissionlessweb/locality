@@ -100,7 +100,7 @@ export default function RegisterMsg() {
                     },
                   }}
                 >
-                   Connect With Us
+                   Sign Up Here
                 </Link>
               </Box>
             </Stack>

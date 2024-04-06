@@ -30,35 +30,25 @@ const EcosystemContent = () => {
 
         if (event.currentTarget.id === '3') {
             setAvailableNetwork(networkData.filter(function (item) {
-                return item.name === "Global";
+                return item.name === "Counseling";
             }));
         }
 
         if (event.currentTarget.id === '4') {
             setAvailableNetwork(networkData.filter(function (item) {
-                return item.name === "Mental Health";
+                return item.name === "Products";
             }));
         }
 
         if (event.currentTarget.id === '5') {
             setAvailableNetwork(networkData.filter(function (item) {
-                return item.name === "Manuals";
+                return item.name === "Defi";
             }));
         }
 
         if (event.currentTarget.id === '6') {
             setAvailableNetwork(networkData.filter(function (item) {
-                return item.name === "Integration";
-            }));
-        }
-        if (event.currentTarget.id === '7') {
-            setAvailableNetwork(networkData.filter(function (item) {
-                return item.name === "Education";
-            }));
-        }
-        if (event.currentTarget.id === '8') {
-            setAvailableNetwork(networkData.filter(function (item) {
-                return item.name === "Policy";
+                return item.name === "Community";
             }));
         }
     }
@@ -69,7 +59,7 @@ const EcosystemContent = () => {
 
     return (
         <section className="ecosystem-section">
-   
+            <div className="container">
             
                 <Center>
                     <p className="sub-heading">
@@ -86,44 +76,31 @@ const EcosystemContent = () => {
                         className={active === "2" ? "active" : undefined}
                         id={"2"}
                         onClick={handleClick}
-                    >HOTLINES - USA</Button>
-                        <Button
+                    >HOTLINES</Button>
+                    <Button
                         key={3}
                         className={active === "3" ? "active" : undefined}
                         id={"3"}
                         onClick={handleClick}
-                    >HOTLINES - GLOBAL</Button>
+                    >COUNSELING </Button>
                     <Button
                         key={4}
                         className={active === "4" ? "active" : undefined}
                         id={"4"}
                         onClick={handleClick}
-                    >MENTAL HEALTH </Button>
+                    >PRODUCTS</Button>
                     <Button
                         key={5}
                         className={active === "5" ? "active" : undefined}
                         id={"5"}
                         onClick={handleClick}
-                    >MANUALS</Button>
+                    >SERVICES</Button>
                     <Button
                         key={6}
                         className={active === "6" ? "active" : undefined}
                         id={"6"}
                         onClick={handleClick}
-                    >INTEGRATION</Button>
-                    <Button
-                        key={7}
-                        className={active === "7" ? "active" : undefined}
-                        id={"7"}
-                        onClick={handleClick}
-                    >EDUCATION</Button>
-                     <Button
-                        key={8}
-                        className={active === "8" ? "active" : undefined}
-                        id={"8"}
-                        onClick={handleClick}
-                    >POLICY</Button>
-
+                    >COMMUNITIES</Button>
 
                 </div>
                 <div className="network-section">
@@ -144,7 +121,7 @@ const EcosystemContent = () => {
 
                 </div>
 
-        
+            </div>
         </section>
 
     )
