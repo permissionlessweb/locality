@@ -54,7 +54,7 @@ export default function RegisterMsg() {
                   color: "gray.500",
                 }}
               >
-                Let's Collab.
+                Let&aposs Collab.
               </chakra.span>
             </chakra.span>
             <Stack

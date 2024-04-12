@@ -34,7 +34,7 @@ export default function HowItWorksMsg() {
           }}
           fontWeight="bold"
         >
-          What's The Plan?
+          What&aposs The Plan?
         </chakra.h2>
         <Box
           w="md"
@@ -72,7 +72,7 @@ export default function HowItWorksMsg() {
               color: "gray.200",
             }}
           >
-            Artist's are invited to create pieces for the genesis collection.
+            Artist&aposs are invited to create pieces for the genesis collection.
           </chakra.p>
           <br />
         </Box>
