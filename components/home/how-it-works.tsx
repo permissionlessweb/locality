@@ -1,4 +1,5 @@
 import { Box, Flex, Link, Stack, chakra, Text } from "@chakra-ui/react";
+import RegisterMsg from "./register-modal";
 
 
 export default function HowItWorksMsg() {
@@ -12,12 +13,14 @@ export default function HowItWorksMsg() {
       w="full"
       alignItems='flex-start'
       justifyContent="start"
+      borderRadius={5}
 
     >
 
       <Stack justifyContent='ce'>
         <chakra.h2
           color="gray.800"
+          borderRadius={5}
           _dark={{
             color: "white",
           }}
@@ -39,14 +42,10 @@ export default function HowItWorksMsg() {
           py={4}
           px={8}
           bg="white"
-          _dark={{
-            bg: "gray.800",
-          }}
+          _dark={{ bg: "gray.800" }}
           shadow="lg"
           rounded="lg"
         >
-
-
           <Flex justifyContent="start" mt={4}>
             <Text
               fontSize={{
@@ -73,11 +72,10 @@ export default function HowItWorksMsg() {
               color: "gray.200",
             }}
           >
-            1,111 pieces of art made by various artist will be tokenized & deployed for sale on-chain.
+            Artist's are invited to create pieces for the genesis collection.
           </chakra.p>
           <br />
         </Box>
-
         <Box
           w="md"
           mx="auto"
@@ -118,7 +116,10 @@ export default function HowItWorksMsg() {
               color: "gray.200",
             }}
           >
-            All funding from the sale of the nft collection will automatically route to a treasury managed by members of the DAO.
+            Any resources generated will be managed transparently through DAO-DAO, a smart contract powered collaboration platform.
+            <br />
+            <br />
+            All on-chain. All verifiable.
           </chakra.p>
           <br />
         </Box>
@@ -164,13 +165,15 @@ export default function HowItWorksMsg() {
               color: "gray.200",
             }}
           >
-            Resources for various stratigies we can take as a DAO. All on-chain. All verifiable.
+            Deliberate partnerships & opportunities to create postive impacts in our communities will then be the priority.
+            <br />
+            <br />
+            This is where we will see creativity shine.
           </chakra.p>
           <br />
         </Box>
       </Stack>
-
-      
+      <RegisterMsg />
     </Flex>
   )
 }

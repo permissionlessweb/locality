@@ -43,85 +43,85 @@ function Navbar() {
   function toPress() {
     window.location.href = 'https://daodao.zone/dao/juno1zdgyyzm34q22vmyz247evnzzls6kclun7v8l5ncjzlv7w2l4lvvqsevqe2/press';
   }
-  
+
 
 
   const MobileNavContent = (
     <VStack
-    pos="absolute"
-    top={0}
-    left={0}
-    right={0}
-    display={mobileNav.isOpen ? "flex" : "none"}
-    flexDirection="column"
-    p={2}
-    pb={4}
-    m={2}
-    bg={bg}
-    spacing={3}
-    rounded="sm"
-    shadow="sm"
-    zIndex={10} // Set a higher z-index value for the mobile menu
-  >
+      pos="absolute"
+      top={0}
+      left={0}
+      right={0}
+      display={mobileNav.isOpen ? "flex" : "none"}
+      flexDirection="column"
+      p={2}
+      pb={6}
+      m={2}
+      bg={bg}
+      spacing={3}
+      rounded="sm"
+      shadow="sm"
+      zIndex={10} // Set a higher z-index value for the mobile menu
+    >
       <CloseButton
         aria-label="Close menu"
         justifySelf="self-start"
         onClick={mobileNav.onClose}
       />
-        <Button
+      <Button
         w="full"
         onClick={toHome}
         variant="ghost"
         colorScheme="brand"
         leftIcon={<FaBroadcastTower />}
       >
-       Home
+        Home
       </Button>
       <Button onClick={toPress} w="full" variant="ghost" leftIcon={<IoNewspaperOutline />}>
-        Blog 
+        Blog
       </Button>
-  
+
       <Button onClick={toRegistration} w="full" variant="ghost" leftIcon={<FaQuestionCircle />}>
-      Register to Participate
+        Register to Participate
       </Button>
       <Button onClick={toEmergency} w="full" variant="ghost" leftIcon={<IoWarningOutline />}>
-      Emergency
+        Emergency
       </Button>
     </VStack>
   );
-  
+
   return (
     <nav className="navbar">
-    <React.Fragment>
- <chakra.header
+      <React.Fragment>
+        <chakra.header
           ref={ref}
           shadow='md'
           transition="box-shadow 0.2s"
           bg={bg}
-
+          borderRadius={5}
           borderTopColor="brand.400"
           w="full"
           overflowY="hidden"
         >
-      <chakra.div h="4.5rem" mx="auto" maxW="1200px">
-      <Flex
+          <chakra.div h="4.5rem" mx="auto"  maxW="1200px">
+            <Flex
               w="full"
               h="full"
               px="6"
               alignItems="center"
               justifyContent="space-between"
             >
-      <Flex align="flex-start">
-        <Link href="/" >
-        <HStack>
-            {/* <Logo boxSize="6" mr="2" /> */}
-            <Heading fontSize="xl" fontWeight="semibold">
-              Locality 
-            </Heading>
-            </HStack>
-        </Link>
-      </Flex>
-      <Flex>
+              <Flex align="flex-start">
+                <Link href="/" >
+                  <HStack>
+                    {/* <Logo boxSize="6" mr="2" /> */}
+                    <Heading fontSize="xl" fontWeight="semibold">
+                      Locality
+                    </Heading>
+                  </HStack>
+                </Link>
+              </Flex>
+              <Flex>
                 <HStack
                   spacing="5"
                   display={{
@@ -129,25 +129,25 @@ function Navbar() {
                     md: "flex",
                   }}
                 >
-                   <Link>
-                        <Button
-                    bg={bg}
-                    color="gray.500"
-                    display="inline-flex"
-                    alignItems="center"
-                    fontSize="md"
-                    _hover={{
-                      color: cl,
-                    }}
-                    _focus={{
-                      boxShadow: "none",
-                    }}
-                  >
-                    Blog 
-                  </Button>
-                 </Link>
-                  <FeaturesPopoverModal/>
-            
+                  <Link>
+                    <Button
+                      bg={bg}
+                      color="gray.500"
+                      display="inline-flex"
+                      alignItems="center"
+                      fontSize="md"
+                      _hover={{
+                        color: cl,
+                      }}
+                      _focus={{
+                        boxShadow: "none",
+                      }}
+                    >
+                      Blog
+                    </Button>
+                  </Link>
+                  <FeaturesPopoverModal />
+
                 </HStack>
               </Flex>
               <Flex justify="flex-end" align="center" color="gray.400">
@@ -158,10 +158,10 @@ function Navbar() {
                     md: "flex",
                   }}
                 >
-       
+
                 </HStack>
 
-                 <Button
+                <Button
                   display={{
                     base: "flex",
                     md: "none",
@@ -175,14 +175,14 @@ function Navbar() {
                   variant="ghost"
                   onClick={mobileNav.onOpen}
                 >menu &nbsp; <FaConnectdevelop /> </Button>
-                        <ColorModeToggle />
-        </Flex>
-      </Flex>
+                <ColorModeToggle />
+              </Flex>
+            </Flex>
 
-    {MobileNavContent}
-    </chakra.div>
-    </chakra.header>
-    </React.Fragment>
+            {MobileNavContent}
+          </chakra.div>
+        </chakra.header>
+      </React.Fragment>
     </nav>
   );
 }

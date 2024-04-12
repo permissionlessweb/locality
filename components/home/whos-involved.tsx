@@ -13,14 +13,11 @@ export default function WhosInvolvedMsg() {
         w="full"
         alignItems='flex-start'
         justifyContent="end"
-
       >
         <Stack justifyContent='ce'>
           <chakra.h2
             color="gray.800"
-            _dark={{
-              color: "white",
-            }}
+            _dark={{ color: "white", }}
             fontSize={{
               base: "2xl",
               md: "3xl",
@@ -31,7 +28,7 @@ export default function WhosInvolvedMsg() {
             }}
             fontWeight="bold"
           >
-            Whos Involved?
+            Who&apos;s Involved?
           </chakra.h2>
           <Box
             w="md"
@@ -45,8 +42,6 @@ export default function WhosInvolvedMsg() {
             shadow="lg"
             rounded="lg"
           >
-
-
             <Flex justifyContent="start" mt={4}>
               <Text
                 fontSize={{
@@ -103,7 +98,6 @@ export default function WhosInvolvedMsg() {
               }}
             >
             </chakra.p>
-
             <Flex justifyContent="start" mt={4}>
               <Text
                 fontSize={{
@@ -131,7 +125,6 @@ export default function WhosInvolvedMsg() {
               }}
             >
               TerpNET Design DAO
-
             </chakra.p>
             <chakra.p
               mt={2}
@@ -143,14 +136,8 @@ export default function WhosInvolvedMsg() {
             </chakra.p>
             <br />
           </Box>
-
-
-
-
         </Stack>
-
       </Flex>
-      <RegisterMsg />
     </>
   )
 }

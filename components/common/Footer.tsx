@@ -131,9 +131,9 @@ export function Footer() {
           fontSize: '$sm',
         }}
       >
-        <Text>Built with</Text>
-        <Link href="https://cosmology.zone/" target="_blank">
-          Cosmology
+        <Text>Dedicated to </Text>
+        <Link href="" target="_blank">
+          Alex
         </Link>
       </Stack>
     </>

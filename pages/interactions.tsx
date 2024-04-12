@@ -83,7 +83,6 @@ const Interactions: FC = () => {
   )
 
   return (
-    <Layout>
     <div className={styles.container}>
       <div className={styles.interactions}>
         {substanceLabels.map((substance) => (
@@ -119,7 +118,6 @@ const Interactions: FC = () => {
         <InteractionDisclaimer />
       </div>
     </div>
-    </Layout>
   )
 }
 

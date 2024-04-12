@@ -8,16 +8,15 @@ import React from "react"
 const Breathe: FC = () => (
   <>
     <Head>
-      <title>Salvum | Breathe</title>
+      <title>Locality | Breathe</title>
       <meta
         name="description"
         content="Guided breathing exercise to help ground yourself."
       />
     </Head>
 
-    <div className="breath-container">
-      <Header title="Breathe" backHref="/apps" centered />
-
+    <Header title="Breathe" backHref="/" centered />
+    <div className="">
       <BreatheComponent />
     </div>
   </>

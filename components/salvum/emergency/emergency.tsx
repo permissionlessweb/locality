@@ -54,7 +54,7 @@ export const RowLink: FC<RowLinkProps> = ({ label, href, icon, marginTop }) => {
       }}
     >
       <p>{label}</p>
-      <Icon size={22} />
+      <Icon size={15} />
     </a>
   )
 }
@@ -67,11 +67,13 @@ export const PeerSupportResourcesSection: FC<SectionProps> = (props) => (
       href="tel:+16234737433"
       icon={IoCallOutline}
     />
+    <br/>
     <RowLink
       label="Fireside Project's Texting Line"
       href="sms:+16234737433"
       icon={IoChatbubblesOutline}
     />
+    <br/>
     <RowLink label="TripSit's Internet Chat" href="https://chat.tripsit.me" />
   </Section>
 )
@@ -105,23 +107,23 @@ export const RecoveryPositionSection: FC<SectionProps> = (props) => (
     </p>
 
     <Image
-      src="/recovery_position.svg"
+      src="/svg/recovery_position.svg"
       alt="Recovery position illustration"
       width={400}
       height={150}
     />
 
-      <li>
-        Ensure their airway is clear (remove anything inside their mouth).
-      </li>
-      <li>Lay them on their side.</li>
-      <li>
-        Bend the knee that is higher up in the air over their body to prevent
-        them from rolling over.
-      </li>
-      <li>Turn their face to the side, optionally resting it on their arm.</li>
-      <li>Position their chin up so their throat is open.</li>
- 
+    <li>
+      Ensure their airway is clear (remove anything inside their mouth).
+    </li>
+    <li>Lay them on their side.</li>
+    <li>
+      Bend the knee that is higher up in the air over their body to prevent
+      them from rolling over.
+    </li>
+    <li>Turn their face to the side, optionally resting it on their arm.</li>
+    <li>Position their chin up so their throat is open.</li>
+
 
     <RowLink
       label="Photograph by Rama, Wikimedia Commons, Cc-by-sa-2.0-fr"

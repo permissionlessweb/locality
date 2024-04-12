@@ -1,9 +1,7 @@
 import { Link, Box, Button, Icon, Text, useTheme, useColorModeValue } from '@interchain-ui/react';
 import { dependencies } from '@/config';
 
-const stacks = ['CosmosKit', 'Next.js'];
 
-const stargazejs = dependencies[0];
 
 export function Header() {
   const { theme, setTheme } = useTheme();
@@ -23,49 +21,8 @@ export function Header() {
           }}
           onClick={toggleColorMode}
         >
-          <Icon name={useColorModeValue('moonLine', 'sunLine')}/>
+          <Icon name={useColorModeValue('moonLine', 'sunLine')} />
         </Button>
-      </Box>
-
-      <Box textAlign="center">
-        {/* <Text
-          as="h1"
-          fontWeight="$extrabold"
-          fontSize={{ mobile: '$6xl', tablet: '$10xl' }}
-          attributes={{
-            marginBottom: '$8',
-          }}
-        >
-          Create Cosmos App
-        </Text>
-        <Text as="h2" fontWeight="$bold">
-          <Text
-            as="span"
-            fontSize={{ mobile: '$3xl', tablet: '$8xl', desktop: '$8xl' }}
-          >
-            Welcome to&nbsp;
-          </Text>
-          <Text
-            as="span"
-            fontSize={{ mobile: '$3xl', tablet: '$8xl', desktop: '$8xl' }}
-            color={useColorModeValue('$primary500', '$primary200')}
-          >
-            {stacks.join(' + ')}
-            {' + '}
-
-            <Link
-              href={stargazejs.name}
-              target="_blank"
-              rel="noreferrer"
-              attributes={{
-                color: useColorModeValue('$primary500', '$primary200'),
-                fontSize: { mobile: '$4xl', tablet: '$8xl', desktop: '$8xl' },
-              }}
-            >
-              {stargazejs.name}
-            </Link>
-          </Text>
-        </Text> */}
       </Box>
     </>
   );

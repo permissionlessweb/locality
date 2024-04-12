@@ -25,10 +25,9 @@ const Header: FC<Props> = ({ title, backHref, centered }) => {
 
   return backHref ? (
     <Link href={backHref}>
-      <a className="header-container">
+
         <FiChevronLeft size={30} />
         {content}
-      </a>
     </Link>
   ) : (
     <div className="header-container">{content}</div>

@@ -13,7 +13,7 @@ import React from "react"
 import { Box } from "@chakra-ui/react"
 
 const Weed: FC = () => (
-<Box maxW="7xl" mx="auto">
+  <Box maxW="7xl" mx="auto">
     <Head>
       <title>Salvum | Too Much Weed</title>
       <meta
@@ -21,52 +21,41 @@ const Weed: FC = () => (
         content="Guide to dealing with an uncomfortable weed experience."
       />
     </Head>
-
-
     <Container>
-    <Header title="Too Much Weed" backHref="/emergency" centered />
+      <Header title="Too Much Weed" backHref="/emergency" centered />
+      <div className="PageContent">
       <Section>
         <h1>don&apos;t panic. you&apos;re ok</h1>
       </Section>
-
       <Section>
         <h2>Keep in mind...</h2>
-     
-          <li>your body is safe</li>
-          <li>
-            you are experiencing a substance-induced state of mind, which will
-            end
-          </li>
-          <li>this is normal</li>
-      
+        <li>your body is safe</li>
+        <li>
+          you are experiencing a substance-induced state of mind, which will
+          end
+        </li>
+        <li>this is normal</li>
       </Section>
-
       <Section>
         <h2>Are you...</h2>
-      
-          <li>hungry?</li>
-          <li>thirsty?</li>
-          <li>too warm or too cold?</li>
-          <li>overwhelmed by noise?</li>
-          <li>in an uncomfortable social situation?</li>
-       
+        <li>hungry?</li>
+        <li>thirsty?</li>
+        <li>too warm or too cold?</li>
+        <li>overwhelmed by noise?</li>
+        <li>in an uncomfortable social situation?</li>
       </Section>
-
       <Section>
         <h2>Try...</h2>
-      
-          <li>following the breathing exercise below</li>
-          <li>grabbing some water or tasty food</li>
-          <li>changing the music to something chill or light</li>
-          <li>taking a bath or shower</li>
-          <li>thinking of someone you love</li>
-          <li>wrapping yourself in a blanket</li>
-          <li>distracting yourself with a game, movie, or show</li>
-          <li>cuddling with a pet</li>
-          <li>going to sleep</li>
-       
+        <li>following the breathing exercise below</li>
+        <li>grabbing some water or tasty food</li>
+        <li>changing the music to something chill or light</li>
+        <li>taking a bath or shower</li>
+        <li>thinking of someone you love</li>
+        <li>wrapping yourself in a blanket</li>
+        <li>distracting yourself with a game, movie, or show</li>
+        <li>cuddling with a pet</li>
+        <li>going to sleep</li>
       </Section>
-
       <Section>
         <h2>Natural remedies</h2>
         <p>
@@ -85,10 +74,10 @@ const Weed: FC = () => (
           marginTop="1rem"
         />
       </Section>
-
       <BreatheSection />
 
       <PeerSupportResourcesSection />
+      </div>
     </Container>
   </Box>
 )

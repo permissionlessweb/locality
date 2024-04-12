@@ -27,7 +27,7 @@ const OpioidPoisoning: FC = () => (
     </Head>
 
     <Header title="Opioid Overdose" backHref="/emergency" centered />
-
+    <div className="PageContent">
     <Container>
       <Section transparent>
         <h1>Signs of Overdose</h1>
@@ -169,6 +169,7 @@ const OpioidPoisoning: FC = () => (
 
       <RecoveryPositionSection />
     </Container>
+      </div>
   </Box>
 )
 
