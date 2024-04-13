@@ -12,9 +12,10 @@ import {
 } from "../utils/types"
 import styles from "../styles/interactions.module.scss"
 import { Container, Text } from "@chakra-ui/react"
-import { useInteractions } from "@/utils/swr"
-import { getInteractions } from "@/services/interactions/data"
-import { Layout } from "@/components"
+import { useInteractions } from "../utils/swr"
+import { getInteractions } from "../services/interactions/data"
+import { Layout } from "../components"
+import React from "react"
 
 const Interactions: FC = () => {
   const { interactions } = useInteractions()
@@ -83,6 +84,7 @@ const Interactions: FC = () => {
   )
 
   return (
+    <Layout>
     <div className={styles.container}>
       <div className={styles.interactions}>
         {substanceLabels.map((substance) => (
@@ -94,11 +96,11 @@ const Interactions: FC = () => {
                 substance === substance1 || substance === substance2,
             })}
           >
-            <Text   color="white"
-          _dark={{
-            color: "white",
-          }}>
-            {substance}
+            <Text color="white"
+              _dark={{
+                color: "white",
+              }}>
+              {substance}
             </Text>
           </button>
         ))}
@@ -118,6 +120,7 @@ const Interactions: FC = () => {
         <InteractionDisclaimer />
       </div>
     </div>
+    </Layout>
   )
 }
 

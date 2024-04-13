@@ -4,6 +4,7 @@ import { FC } from "react"
 import BreatheComponent from "../../components/salvum/breath"
 import Header from "../../components/salvum/header"
 import React from "react"
+import { Layout } from "../../components"
 
 const Breathe: FC = () => (
   <>
@@ -15,10 +16,12 @@ const Breathe: FC = () => (
       />
     </Head>
 
-    <Header title="Breathe" backHref="/" centered />
-    <div className="">
-      <BreatheComponent />
-    </div>
+    <Layout>
+      <Header title="Breathe" backHref="/" centered />
+      <div className="">
+        <BreatheComponent />
+      </div>
+    </Layout>
   </>
 )
 

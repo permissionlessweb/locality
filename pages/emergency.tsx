@@ -60,7 +60,7 @@ const EmergencyPage: FC = () => {
             The information contained within these pages is intended for
             educational purposes only. It is your responsibility to do your own
             research and ensure you know what steps to take in the event of a
-            dangerous situation. It&apos;s better to be safe than sorry, so when
+            dangerous situation. It&apos;;s better to be safe than sorry, so when
             in doubt, contact emergency health services if anyone is at risk of
             hurting themself or others.
           </p>

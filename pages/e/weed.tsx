@@ -25,7 +25,7 @@ const Weed: FC = () => (
       <Header title="Too Much Weed" backHref="/emergency" centered />
       <div className="PageContent">
       <Section>
-        <h1>don&apos;t panic. you&apos;re ok</h1>
+        <h1>don&apos;;t panic. you&apos;;re ok</h1>
       </Section>
       <Section>
         <h2>Keep in mind...</h2>

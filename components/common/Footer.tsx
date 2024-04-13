@@ -1,5 +1,6 @@
 import { Box, Link, Text, Icon, Stack, Divider, useColorModeValue } from '@interchain-ui/react';
 import { dependencies, products, Project } from '@/config';
+import React from 'react';
 
 function Product({ name, desc, link }: Project) {
   return (
@@ -119,23 +120,7 @@ export function Footer() {
           <Dependency key={dependency.name} {...dependency}></Dependency>
         ))}
       </Box> */}
-      <Box mb="$6">
-        <Divider />
-      </Box>
-      <Stack
-        direction="horizontal"
-        space="$2"
-        attributes={{
-          justifyContent: 'center',
-          opacity: 0.5,
-          fontSize: '$sm',
-        }}
-      >
-        <Text>Dedicated to </Text>
-        <Link href="" target="_blank">
-          Alex
-        </Link>
-      </Stack>
+
     </>
   );
 }

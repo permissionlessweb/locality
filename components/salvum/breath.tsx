@@ -77,7 +77,7 @@ const Breathe: FC<BreatheProps> = ({ smaller }) => {
   }, [setBreathingIn, setBreathingOut, setCount])
 
   return (
-    <div className="breatheContainer">
+    <div className="breatheContainer" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
       <div
         className={cn("outer", {
           "breatheIn": breathingIn,
@@ -90,12 +90,11 @@ const Breathe: FC<BreatheProps> = ({ smaller }) => {
           </div>
         </div>
       </div>
-
       <p className={cn("instructions", { ["smaller"]: smaller })}>
         {instructions}
       </p>
     </div>
-  )
+  );
 }
 
 export default Breathe

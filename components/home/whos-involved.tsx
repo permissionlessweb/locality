@@ -28,7 +28,7 @@ export default function WhosInvolvedMsg() {
             }}
             fontWeight="bold"
           >
-            Who&apos;s Involved?
+            Who&apos;;s Involved?
           </chakra.h2>
           <Box
             w="md"

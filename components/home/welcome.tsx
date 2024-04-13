@@ -141,9 +141,9 @@ export default function WelcomeMsg() {
                 base: 4,
                 md: 2,
               }}
+              padding={4}
               justifyContent="center"
             >
-
               <Box display="inline-flex" bg="white.600"
                 _dark={{
                   bg: "white.500",
@@ -151,12 +151,12 @@ export default function WelcomeMsg() {
                 }} rounded="md" shadow="md">
                 <LargeButton
                   width="260px"
-                  btnContent="Mint Now"
+                  btnContent="Mint (Coming Soon!)"
                   handleClick={ToMint}
+                  disabled
 
                 />
                 <Box mt="auto" padding="4px">
-
 
                 </Box>
                 <LargeButton

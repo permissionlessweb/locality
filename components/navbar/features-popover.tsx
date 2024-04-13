@@ -92,9 +92,9 @@ const Features = (props: any) => {
         <Section
           href={toInteractions}
           title="Interaction's Chart"
-         
+
         >
-         Choose two substances to view their interaction profile. 
+          Choose two substances to view their interaction profile.
         </Section>
 
         {/* <Section
@@ -106,20 +106,12 @@ const Features = (props: any) => {
         </Section> */}
         <Section
           href={toBreathe}
-          title="Breathe"
-      
+          title="Organizations"
+
         >
-A guided square breath to ground yourself
+        A list of various harm reduction communities.
         </Section>
-        <Button onClick={toEmergency}> <IoWarning/> &nbsp; Emergency </Button>
-
-
-
-
-
-
-
-
+        <Button onClick={toEmergency}> <IoWarning /> &nbsp; Emergency </Button>
         {/* <Section
             title="Integrations"
             description={
@@ -174,7 +166,7 @@ const FeaturesPopoverModal = () => {
           }}
           rightIcon={<IoArrowDown />}
         >
-         Harm-Reduction Widgets
+          Harm-Reduction Widgets
         </Button>
       </PopoverTrigger>
 

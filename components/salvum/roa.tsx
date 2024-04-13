@@ -1,8 +1,10 @@
 import cn from 'classnames'
 import { FC } from 'react'
 
-import { ROA } from '../../types'
+
 import styles from '../../styles/roa.module.scss'
+import { ROA } from '../../utils/types'
+import React from 'react'
 
 interface Props {
   roa: ROA

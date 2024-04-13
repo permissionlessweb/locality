@@ -71,7 +71,7 @@ const OpioidPoisoning: FC = () => (
       <Section>
         <h2>Stimulation</h2>
         <p>
-          If you&apos;re not sure whether they are overdosing, check if they
+          If you&apos;;re not sure whether they are overdosing, check if they
           respond to stimulus. Do not use too much force.
         </p>
 
@@ -80,7 +80,7 @@ const OpioidPoisoning: FC = () => (
           <li>Call their name.</li>
           <li>
             Say something they may not like to hear to grab their attention
-            (such as &quot;I&apos;m going to call the police&quot;).
+            (such as &quot;I&apos;;m going to call the police&quot;).
           </li>
     
 
@@ -93,7 +93,7 @@ const OpioidPoisoning: FC = () => (
           <li>Rub your knuckles on their upper lip.</li>
           <li>Pinch the back of their arm.</li>
         <p>
-          If they don&apos;t respond and show signs listed above, assume they
+          If they don&apos;;t respond and show signs listed above, assume they
           are overdosing.
         </p>
       </Section>
@@ -125,7 +125,7 @@ const OpioidPoisoning: FC = () => (
           <li>They are unresponsive.</li>
           <li>Your exact location.</li>
         <p className="dim">
-          The dispatcher only needs to know that someone&apos;s life is in
+          The dispatcher only needs to know that someone&apos;;s life is in
           immediate danger. Mentioning drugs could draw unwanted and unnecessary
           attention.
         </p>

@@ -89,7 +89,7 @@ export const Signs: FC<SignsProps> = ({ signs }) => (
     {signs.map(({ icon: Icon, label }) => (
       <div key={label} className="sign">
         <div className="signIconWrapper">
-          <Icon size={40} color="#ffffff" />
+        <></>
         </div>
         <p className="text">{label}</p>
       </div>

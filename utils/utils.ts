@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js';
-import { chains } from 'chain-registry';
-import { Asset, Chain } from '@chain-registry/types';
-import { STARGAZE_ADDRESS_LENGTH, STARGAZE_TOKEN_DENOM, STARGAZE_TOKEN_EXPONENT } from '@/config';
+// import { chains } from 'chain-registry';
+// import { Asset, Chain } from '@chain-registry/types';
+// import { STARGAZE_ADDRESS_LENGTH, STARGAZE_TOKEN_DENOM, STARGAZE_TOKEN_EXPONENT } from '@/config';
 
 export function ipfs(url: string = '') {
   if (url.startsWith('http')) return url;
@@ -46,17 +46,17 @@ export function percent(value: string | number, decimals = 0) {
   return new BigNumber(value).multipliedBy(100).decimalPlaces(decimals, BigNumber.ROUND_DOWN).toString()
 }
 
-export function display(amount: string | number = 0, exponent = STARGAZE_TOKEN_EXPONENT) {
-  return new BigNumber(amount || 0).shiftedBy(-exponent).decimalPlaces(2).toString();
-}
+// export function display(amount: string | number = 0, exponent = STARGAZE_TOKEN_EXPONENT) {
+//   return new BigNumber(amount || 0).shiftedBy(-exponent).decimalPlaces(2).toString();
+// }
 
-export function coin(amount: number | string = 0, exponent = STARGAZE_TOKEN_EXPONENT) {
-  if (!amount) return { amount: '0', denom: STARGAZE_TOKEN_DENOM };
-  return {
-    denom: STARGAZE_TOKEN_DENOM,
-    amount: new BigNumber(amount).shiftedBy(exponent).toString()
-  };
-};
+// export function coin(amount: number | string = 0, exponent = STARGAZE_TOKEN_EXPONENT) {
+//   if (!amount) return { amount: '0', denom: STARGAZE_TOKEN_DENOM };
+//   return {
+//     denom: STARGAZE_TOKEN_DENOM,
+//     amount: new BigNumber(amount).shiftedBy(exponent).toString()
+//   };
+// };
 
 export function shorten(address: string = '', first = 10, last = 6) {
   if (!address) return '';
@@ -87,18 +87,18 @@ export function minus(
   return new BigNumber(minuend).minus(subtrahend).toString();
 };
 
-export function isValidAddress(address = '') {
-  return address.startsWith('stars') && address.length === STARGAZE_ADDRESS_LENGTH;
-}
+// export function isValidAddress(address = '') {
+//   return address.startsWith('stars') && address.length === STARGAZE_ADDRESS_LENGTH;
+// }
 
-export function getLogo(from: Asset | Chain) {
-  return from.logo_URIs?.svg || from.logo_URIs?.png || from.logo_URIs?.jpeg;
-}
+// export function getLogo(from: Asset | Chain) {
+//   return from.logo_URIs?.svg || from.logo_URIs?.png || from.logo_URIs?.jpeg;
+// }
 
-export function getChainLogo(name: string) {
-  const chain = chains.find(chain => chain.chain_name === name)
-  return chain ? getLogo(chain) : null;
-}
+// export function getChainLogo(name: string) {
+//   const chain = chains.find(chain => chain.chain_name === name)
+//   return chain ? getLogo(chain) : null;
+// }
 
 export function getStargazeProfileLink(address: string | undefined) {
   if (!address) return 'https://www.stargaze.zone';

@@ -1,5 +1,6 @@
 import { Flex, chakra, Stack, Box, Link, Center } from "@chakra-ui/react";
 import router from "next/router";
+import React from "react";
 
 
 export default function RegisterMsg() {
@@ -54,7 +55,7 @@ export default function RegisterMsg() {
                   color: "gray.500",
                 }}
               >
-                Let&aposs Collab.
+                Let&apos;s Collab.
               </chakra.span>
             </chakra.span>
             <Stack

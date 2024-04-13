@@ -1,6 +1,7 @@
+import { Substance } from "@/utils/types";
 import React from "react";
 import ReactDOM from "react-dom";
-import { Substance } from "../../types";
+
 
 interface SubstanceModalProps {
   substance: Substance | null;

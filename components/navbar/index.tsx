@@ -31,9 +31,9 @@ function Navbar() {
   function toHome() {
     router.push('/');
   }
-  function toJudging() {
-    router.push('/judging');
-  }
+  // function toJudging() {
+  //   router.push('/judging');
+  // }
   function toRegistration() {
     router.push('/register');
   }
@@ -174,7 +174,7 @@ function Navbar() {
                   }}
                   variant="ghost"
                   onClick={mobileNav.onOpen}
-                >menu &nbsp; <FaConnectdevelop /> </Button>
+                >menu &nbsp;</Button>
                 <ColorModeToggle />
               </Flex>
             </Flex>

@@ -1,3 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utiblities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -285,4 +325,124 @@ a {
 
 .rowLink:hover {
   color: #40a9ff;
+}
+
+.centered-content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+  padding: 180px; /* Adjust padding as needed */
+}
+
+.centered-content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full height of the viewport */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.register-msg {
+  /* Styles for the RegisterMsg component */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust layout for screens smaller than 768px (e.g., mobile) */
+  .centered-content {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .register-msg {
+    width: 100%; /* Full width on mobile */
+    margin-top: 20px; /* Add margin-top for spacing */
+  }
+}
+
+.breatheContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.breatheContainer .outer {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background: rgb(97, 190, 162);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: 4s;
+  transform: scale(0.65);
+}
+
+.breatheContainer .outer .middle {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background: rgb(156, 217, 198);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breatheContainer .outer .middle .inner {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background: rgb(182, 227, 213);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breatheContainer .outer .middle .inner p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff; /* Update with your desired color */
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: 4s;
+}
+
+.breatheContainer .outer.breatheIn {
+  animation-name: breathe-in;
+}
+
+.breatheContainer .outer.breatheOut {
+  animation-name: breathe-out;
+}
+
+.instructions {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.instructions.smaller {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+@keyframes breathe-in {
+  from {
+    transform: scale(0.65);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes breathe-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.65);
+  }
 }

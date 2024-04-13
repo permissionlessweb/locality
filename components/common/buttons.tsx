@@ -1,5 +1,5 @@
 import { useColorModeValue, Button } from '@chakra-ui/react';
-import { useColor } from 'hooks';
+import { useColor } from '../../hooks';
 import React, { ReactNode } from 'react';
 
 export const SimpleButton = ({
@@ -175,32 +175,35 @@ export const LargeButton = ({
 }) => {
   return (
     <Button
-      isLoading={isLoading}
-      isDisabled={isLoading || disabled}
-      onClick={handleClick}
-      rightIcon={rightIcon}
-      _hover={{
-        opacity: isLoading || disabled ? 1 : 0.9,
-      }}
-      _active={{
-        opacity: isLoading || disabled ? 1 : 0.9,
-      }}
-      _disabled={{
-        cursor: 'not-allowed',
-        background: '#CBD3DD',
-        color: '#697584',
-        boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.05)',
-      }}
-      w={width}
-      h="68px"
-      bgColor={useColorModeValue('#2C3137', '#EEF2F8')}
-      boxShadow="0px 4px 10px rgba(0, 0, 0, 0.3)"
-      borderRadius="6px"
-      fontWeight="semibold"
-      fontSize="18px"
-      color={useColorModeValue('#FFF', '#1D2024')}
-    >
-      {btnContent}
-    </Button>
+    isLoading={isLoading}
+    isDisabled={isLoading || disabled}
+    onClick={handleClick}
+    rightIcon={rightIcon}
+    _hover={{
+      opacity: isLoading || disabled ? 1 : 0.9,
+    }}
+    _active={{
+      opacity: isLoading || disabled ? 1 : 0.9,
+    }}
+    _disabled={{
+      cursor: 'not-allowed',
+      background: '#CBD3DD',
+      color: '#697584',
+      boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.05)',
+    }}
+    w={width}
+    h="68px"
+    bgColor={useColorModeValue('#2C3137', '#EEF2F8')}
+    boxShadow="0px 4px 10px rgba(0, 0, 0, 0.3)"
+    borderRadius="6px"
+    fontWeight="semibold"
+    fontSize="18px"
+    color={useColorModeValue('#FFF', '#1D2024')}
+    whiteSpace="nowrap"     // Prevents text from wrapping
+    overflow="hidden"       // Hides any text that overflows
+    textOverflow="ellipsis" // Displays an ellipsis (...) when text overflows
+  >
+    {btnContent}
+  </Button>
   );
 };
