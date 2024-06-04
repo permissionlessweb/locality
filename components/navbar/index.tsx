@@ -3,14 +3,18 @@ import { useViewportScroll } from "framer-motion";
 import React from "react";
 import { FaBroadcastTower, FaConnectdevelop, FaDiscord, FaGithub, FaQq, FaQuestionCircle, FaQuran, FaTwitter, FaVoteYea } from "react-icons/fa";
 
-import { ActionButton } from "./action-button";
 import { ColorModeToggle } from "./color-mode-toggle";
-import { CONSTANTS } from "../../config/defaults";
-import { InfoOutlineIcon } from "@chakra-ui/icons";
-import { FiCamera, FiHome } from "react-icons/fi";
-import { IoArrowDown, IoMailOutline, IoNewspaperOutline, IoWalletOutline, IoWarningOutline } from "react-icons/io5";
+import {  IoNewspaperOutline, IoWarningOutline } from "react-icons/io5";
 import router from "next/router";
-import FeaturesPopoverModal from "./features-popover";
+import { BsCollection } from "react-icons/bs";
+import {
+  Home,
+  LineChart,
+  Package2,
+  PanelLeft,
+  Users2,
+} from "lucide-react"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/common/sheet"
 
 
 
@@ -31,11 +35,11 @@ function Navbar() {
   function toHome() {
     router.push('/');
   }
-  // function toJudging() {
-  //   router.push('/judging');
-  // }
-  function toRegistration() {
-    router.push('/register');
+  function toFocalPoints() {
+    router.push('/focal-points');
+  }
+  function toInteractions() {
+    router.push('/interactions');
   }
   function toEmergency() {
     router.push('/emergency');
@@ -43,7 +47,6 @@ function Navbar() {
   function toPress() {
     window.location.href = 'https://daodao.zone/dao/juno1zdgyyzm34q22vmyz247evnzzls6kclun7v8l5ncjzlv7w2l4lvvqsevqe2/press';
   }
-
 
 
   const MobileNavContent = (
@@ -77,12 +80,11 @@ function Navbar() {
       >
         Home
       </Button>
-      <Button onClick={toPress} w="full" variant="ghost" leftIcon={<IoNewspaperOutline />}>
-        Blog
+      <Button onClick={toFocalPoints} w="full" variant="ghost" leftIcon={<BsCollection />}>
+        Browse Focal Points
       </Button>
-
-      <Button onClick={toRegistration} w="full" variant="ghost" leftIcon={<FaQuestionCircle />}>
-        Register to Participate
+      <Button onClick={toInteractions} w="full" variant="ghost" leftIcon={<IoNewspaperOutline />}>
+        Interactions
       </Button>
       <Button onClick={toEmergency} w="full" variant="ghost" leftIcon={<IoWarningOutline />}>
         Emergency
@@ -91,99 +93,56 @@ function Navbar() {
   );
 
   return (
-    <nav className="navbar">
-      <React.Fragment>
-        <chakra.header
-          ref={ref}
-          shadow='md'
-          transition="box-shadow 0.2s"
-          bg={bg}
-          borderRadius={5}
-          borderTopColor="brand.400"
-          w="full"
-          overflowY="hidden"
-        >
-          <chakra.div h="4.5rem" mx="auto"  maxW="1200px">
-            <Flex
-              w="full"
-              h="full"
-              px="6"
-              alignItems="center"
-              justifyContent="space-between"
+    <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button size="icon" variant="outline" className="sm:hidden">
+            <PanelLeft className="h-5 w-5" />
+            <span className="sr-only">Toggle Menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left" className="sm:max-w-xs">
+          <nav className="grid gap-6 text-lg font-medium">
+            <Link
+              href="#"
+              className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
             >
-              <Flex align="flex-start">
-                <Link href="/" >
-                  <HStack>
-                    {/* <Logo boxSize="6" mr="2" /> */}
-                    <Heading fontSize="xl" fontWeight="semibold">
-                      Locality
-                    </Heading>
-                  </HStack>
-                </Link>
-              </Flex>
-              <Flex>
-                <HStack
-                  spacing="5"
-                  display={{
-                    base: "none",
-                    md: "flex",
-                  }}
-                >
-                  <Link>
-                    <Button
-                      bg={bg}
-                      color="gray.500"
-                      display="inline-flex"
-                      alignItems="center"
-                      fontSize="md"
-                      _hover={{
-                        color: cl,
-                      }}
-                      _focus={{
-                        boxShadow: "none",
-                      }}
-                    >
-                      Blog
-                    </Button>
-                  </Link>
-                  <FeaturesPopoverModal />
-
-                </HStack>
-              </Flex>
-              <Flex justify="flex-end" align="center" color="gray.400">
-                <HStack
-                  spacing="5"
-                  display={{
-                    base: "none",
-                    md: "flex",
-                  }}
-                >
-
-                </HStack>
-
-                <Button
-                  display={{
-                    base: "flex",
-                    md: "none",
-                  }}
-                  aria-label="Open menu"
-                  fontSize="20px"
-                  color="gray.800"
-                  _dark={{
-                    color: "inherit",
-                  }}
-                  variant="ghost"
-                  onClick={mobileNav.onOpen}
-                >menu &nbsp;</Button>
-                <ColorModeToggle />
-              </Flex>
-            </Flex>
-
-            {MobileNavContent}
-          </chakra.div>
-        </chakra.header>
-      </React.Fragment>
-    </nav>
+              <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
+              <span className="sr-only">Acme Inc</span>
+            </Link>
+            <Link
+              href="/"
+              className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+            >
+              <Home className="h-5 w-5" />
+              Home
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center gap-4 px-2.5 text-foreground"
+            >
+              <BsCollection className="h-5 w-5" />
+              Browse Focal Points
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+            >
+              <Users2 className="h-5 w-5" />
+              Community Resources
+            </Link>
+            <Link
+              href="#"
+              className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+            >
+              <LineChart className="h-5 w-5" />
+              Analytics & Resources 
+            </Link>
+          </nav>
+        </SheetContent>
+      </Sheet>
+      <ColorModeToggle />
+    </header>
   );
 }
 

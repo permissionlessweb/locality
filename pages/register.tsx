@@ -14,9 +14,7 @@ export default function Register() {
 
     return (
         <div>
-             <Layout>
             <div data-tf-live="01H94JRWRYPZGCDBAN4T7F3M41"></div>
-            </Layout>
         </div>
     );
 }

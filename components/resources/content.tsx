@@ -11,7 +11,7 @@ type Network = {
     wikilink: string;
 }
 
-const EcosystemContent = () => {
+export default function EcosystemContent() {
     const [availableNetwork, setAvailableNetwork] = useState<Network[]>();
     const [active, setActive] = useState<string>("1");
 
@@ -58,7 +58,6 @@ const EcosystemContent = () => {
     }, []);
 
     return (
-        <section className="ecosystem-section">
             <div className="container">
             
                 <Center>
@@ -122,8 +121,6 @@ const EcosystemContent = () => {
                 </div>
 
             </div>
-        </section>
 
     )
 }
-export default EcosystemContent;

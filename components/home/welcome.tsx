@@ -25,6 +25,7 @@ export default function WelcomeMsg() {
 
   }
   return (
+    <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
     <Box maxW="7xl" mx="auto">
       <Box
         pos="relative"
@@ -127,48 +128,10 @@ export default function WelcomeMsg() {
             >
               Creating a focal point on allocating resources for harm-reduction efforts, locally.
             </chakra.p>
-            <Stack
-              direction={{
-                base: "column",
-                sm: "column",
-                md: "row",
-              }}
-              mb={{
-                base: 4,
-                md: 8,
-              }}
-              spacing={{
-                base: 4,
-                md: 2,
-              }}
-              padding={4}
-              justifyContent="center"
-            >
-              <Box display="inline-flex" bg="white.600"
-                _dark={{
-                  bg: "white.500",
-                  color: "white.200"
-                }} rounded="md" shadow="md">
-                <LargeButton
-                  width="260px"
-                  btnContent="Mint (Coming Soon!)"
-                  handleClick={ToMint}
-                  disabled
-
-                />
-                <Box mt="auto" padding="4px">
-
-                </Box>
-                <LargeButton
-                  width="260px"
-                  btnContent="Read The Docs"
-                  handleClick={ToDocs}
-                />
-              </Box>
-            </Stack>
           </Box>
         </Box>
       </Box>
     </Box>
+    </main>
   )
 }
